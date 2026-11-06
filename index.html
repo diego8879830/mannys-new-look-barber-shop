@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Manny's New Look Barber Shop | Barbería · San Juan</title>
   <meta name="description" content="Manny's New Look Barber Shop, barbería en San Juan. Reserva tu turno por WhatsApp: 787-454-6041." />
-  <meta name="theme-color" content="#0B0B0C" />
+  <meta name="theme-color" content="#0C0B0A" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -13,447 +13,407 @@
   <meta property="og:title" content="Manny's New Look Barber Shop" />
   <meta property="og:description" content="Cortes que se notan. Sal como nuevo. Barbería en San Juan." />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23C9A227'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23111'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23D4A72C'/%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet" />
 
-  <!-- schema.org (se reescribe desde DATOS + preset al cargar) -->
   <script type="application/ld+json" id="schema-negocio">
   {"@context": "https://schema.org", "@type": "HairSalon", "name": "Manny's New Look Barber Shop", "telephone": "+1-787-454-6041", "address": {"@type": "PostalAddress", "addressRegion": "PR", "addressCountry": "US", "streetAddress": "1110 Av. Américo Miranda", "addressLocality": "San Juan", "postalCode": "00921"}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "09:00", "closes": "19:00"}], "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "120", "bestRating": "5"}}
   </script>
 
   <style>
     /* =========================================================
-       1. VARIABLES — superficies (claro/oscuro) + tema de color
+       1. VARIABLES — claro / oscuro
        ========================================================= */
     :root{
-      --bg:#F6F5F2;
-      --surface:#FFFFFF;
-      --surface-2:#EFEDE8;
-      --text:#17171A;
-      --muted:#5E5E66;
-      --line:#E0DDD6;
-      --shadow:0 10px 30px rgba(0,0,0,.08);
-      --radius:18px;
-      /* tema (se sobreescribe con data-tema) */
-      --hero-bg:#0B0B0C;
-      --hero-bg-2:#1C1B19;
-      --hero-text:#F5F3EE;
-      --accent:#C9A227;
-      --accent-ink:#141210;
-      --accent-soft:rgba(201,162,39,.14);
+      --ink:#0C0B0A;
+      --ink-2:#1B1916;
+      --cream:#F3EDE0;
+      --gold:#D4A72C;
       --wa:#25D366;
       --wa-ink:#06301A;
+      --header:68px;
+
+      --bg:#F3EDE0;
+      --surface:#FBF8F1;
+      --surface-2:#E8E0CF;
+      --text:#17150F;
+      --muted:#5A5448;
+      --line:#D5CBB6;
+      --accent-text:#7A5A00;
     }
     @media (prefers-color-scheme: dark){
       :root:not([data-modo="claro"]){
-        --bg:#0F0F11; --surface:#18181B; --surface-2:#222226;
-        --text:#F2F1EE; --muted:#A3A3AB; --line:#2E2E33;
-        --shadow:0 10px 30px rgba(0,0,0,.4);
+        --bg:#0F0E0C; --surface:#191714; --surface-2:#23201B;
+        --text:#F3EDE0; --muted:#ADA598; --line:#34302A; --accent-text:#D4A72C;
       }
     }
     :root[data-modo="oscuro"]{
-      --bg:#0F0F11; --surface:#18181B; --surface-2:#222226;
-      --text:#F2F1EE; --muted:#A3A3AB; --line:#2E2E33;
-      --shadow:0 10px 30px rgba(0,0,0,.4);
+      --bg:#0F0E0C; --surface:#191714; --surface-2:#23201B;
+      --text:#F3EDE0; --muted:#ADA598; --line:#34302A; --accent-text:#D4A72C;
     }
-
-    /* Temas de color */
-    [data-tema="negro"]{ --hero-bg:#0B0B0C; --hero-bg-2:#1C1B19; --hero-text:#F5F3EE; --accent:#C9A227; --accent-ink:#141210; --accent-soft:rgba(201,162,39,.14); }
-    [data-tema="azul"]{ --hero-bg:#081C3F; --hero-bg-2:#0F2F66; --hero-text:#F2F6FF; --accent:#3D8BFF; --accent-ink:#FFFFFF; --accent-soft:rgba(61,139,255,.14); }
-    [data-tema="verde"]{ --hero-bg:#0C2A1C; --hero-bg-2:#144430; --hero-text:#F1FAF4; --accent:#2BB673; --accent-ink:#04200F; --accent-soft:rgba(43,182,115,.15); }
-    [data-tema="naranja"]{ --hero-bg:#24160A; --hero-bg-2:#3D2410; --hero-text:#FFF6EC; --accent:#F28C28; --accent-ink:#1F1000; --accent-soft:rgba(242,140,40,.15); }
 
     /* =========================================================
        2. BASE
        ========================================================= */
     *,*::before,*::after{ box-sizing:border-box; }
-    html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; }
+    html{ -webkit-text-size-adjust:100%; }
     body{
       margin:0; background:var(--bg); color:var(--text);
-      font:16px/1.6 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
-      transition:background .3s, color .3s;
+      font:17px/1.6 "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
     }
     img{ max-width:100%; display:block; }
     a{ color:inherit; }
-    h1,h2,h3{ font-family:Sora, Inter, sans-serif; line-height:1.15; margin:0 0 .5em; letter-spacing:-.01em; }
     p{ margin:0 0 1em; }
-    .wrap{ width:100%; max-width:1120px; margin:0 auto; padding:0 16px; }
-    section{ padding:72px 0; }
-    .eyebrow{ display:inline-block; font-size:.78rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-bottom:10px; }
-    .sec-title{ font-size:clamp(1.6rem, 4.5vw, 2.4rem); }
-    .sec-sub{ color:var(--muted); max-width:620px; }
-    .nota{ font-size:.85rem; color:var(--muted); margin-top:18px; font-style:italic; }
-    @media (min-width:768px){ .wrap{ padding:0 28px; } section{ padding:96px 0; } }
+    h1,h2,h3{ margin:0; font-weight:400; }
+    .disp{ font-family:Anton, Impact, "Arial Narrow", sans-serif; text-transform:uppercase; letter-spacing:.01em; line-height:1.04; }
+    .wrap{ width:100%; max-width:1200px; margin:0 auto; padding:0 16px; }
+    section{ padding:80px 0; }
+    .eyebrow{ display:block; font-size:.78rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--accent-text); margin-bottom:12px; }
+    .sec-title{ font-size:clamp(2.6rem, 9vw, 5rem); margin-bottom:.35em; }
+    .sec-sub{ color:var(--muted); max-width:600px; }
+    .nota{ font-size:.88rem; color:var(--muted); font-style:italic; margin:0; }
+    @media (min-width:768px){ .wrap{ padding:0 32px; } section{ padding:120px 0; } }
 
-    /* Botones */
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      min-height:52px; padding:0 22px; border-radius:999px; border:0;
-      font:600 1rem Inter, sans-serif; text-decoration:none; cursor:pointer;
-      transition:transform .2s, box-shadow .2s, background .2s;
+      min-height:54px; padding:0 24px; border-radius:4px; border:0;
+      font:700 1rem "DM Sans", sans-serif; text-decoration:none; cursor:pointer;
+      transition:transform .2s, filter .2s;
     }
     .btn svg{ width:20px; height:20px; flex:none; }
-    .btn:hover{ transform:translateY(-2px); }
-    .btn-wa{ background:var(--wa); color:var(--wa-ink); box-shadow:0 8px 22px rgba(37,211,102,.3); }
-    .btn-accent{ background:var(--accent); color:var(--accent-ink); }
-    .btn-ghost{ background:transparent; color:var(--hero-text); border:1.5px solid rgba(255,255,255,.35); }
-    .btn-line{ background:transparent; color:var(--text); border:1.5px solid var(--line); }
+    .btn:hover{ transform:translateY(-2px); filter:brightness(1.06); }
+    .btn:focus-visible, a:focus-visible, button:focus-visible, summary:focus-visible{ outline:3px solid var(--gold); outline-offset:3px; }
+    .btn-wa{ background:var(--wa); color:var(--wa-ink); }
+    .btn-gold{ background:var(--gold); color:var(--ink); }
+    .btn-ghost{ background:transparent; color:var(--cream); box-shadow:inset 0 0 0 2px rgba(243,237,224,.4); }
+    .ic{ width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+    .ic-fill{ fill:currentColor; stroke:none; }
 
     /* =========================================================
-       3. HEADER
+       3. MUESTRA + HEADER
        ========================================================= */
-    header{
-      position:sticky; top:0; z-index:50;
-      background:color-mix(in srgb, var(--hero-bg) 88%, transparent);
-      backdrop-filter:saturate(1.4) blur(12px); -webkit-backdrop-filter:saturate(1.4) blur(12px);
-      color:var(--hero-text); border-bottom:1px solid rgba(255,255,255,.08);
-    }
-    .nav{ display:flex; align-items:center; justify-content:space-between; gap:12px; height:64px; }
+    .muestra{ background:var(--gold); color:var(--ink); text-align:center; font-size:.8rem; font-weight:500; padding:7px 16px; line-height:1.4; }
+    .muestra b{ letter-spacing:.08em; }
+    header{ position:sticky; top:0; z-index:50; background:var(--ink); color:var(--cream); }
+    .nav{ display:flex; align-items:center; justify-content:space-between; gap:12px; height:var(--header); }
     .marca{ display:flex; align-items:center; gap:10px; min-width:0; text-decoration:none; }
-    .logo{
-      width:38px; height:38px; border-radius:11px; flex:none;
-      display:grid; place-items:center; background:var(--accent); color:var(--accent-ink);
-      font:800 .95rem Sora, sans-serif;
-    }
-    .marca-nombre{ font:700 1rem Sora, sans-serif; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-    .nav-links{ display:none; gap:22px; font-size:.92rem; }
-    .nav-links a{ text-decoration:none; opacity:.8; }
+    .logo{ width:40px; height:40px; flex:none; display:grid; place-items:center; background:var(--gold); color:var(--ink); border-radius:4px; font:400 1.15rem Anton, sans-serif; }
+    .marca-txt{ display:flex; flex-direction:column; min-width:0; line-height:1.2; }
+    .marca-nombre{ font-weight:700; font-size:.92rem; }
+    .marca-sub{ font-size:.72rem; opacity:.7; }
+    .nav-links{ display:none; gap:24px; font-size:.92rem; }
+    .nav-links a{ text-decoration:none; opacity:.78; }
     .nav-links a:hover{ opacity:1; }
     .nav-acc{ display:flex; align-items:center; gap:8px; flex:none; }
-    .modo-btn{
-      width:40px; height:40px; border-radius:50%; border:1px solid rgba(255,255,255,.2);
-      background:transparent; color:var(--hero-text); display:grid; place-items:center; cursor:pointer;
-    }
+    .modo-btn{ width:40px; height:40px; border-radius:50%; border:1px solid rgba(243,237,224,.25); background:transparent; color:var(--cream); display:grid; place-items:center; cursor:pointer; }
     .modo-btn svg{ width:18px; height:18px; }
-    .nav-wa{ min-height:40px; padding:0 16px; font-size:.9rem; display:none; }
-    @media (min-width:900px){ .nav-links{ display:flex; } .nav-wa{ display:inline-flex; } }
+    .nav-wa{ display:none; min-height:40px; padding:0 16px; font-size:.9rem; }
+    .progreso{ position:absolute; left:0; right:0; bottom:0; height:3px; background:var(--gold); transform:scaleX(0); transform-origin:0 50%; }
+    @media (min-width:900px){ .nav-links{ display:flex; } .nav-wa{ display:inline-flex; } .marca-nombre{ font-size:1rem; } }
 
     /* =========================================================
-       4. HERO
+       4. HERO + POSTE DE BARBERÍA
        ========================================================= */
     .hero{
-      position:relative; overflow:hidden; color:var(--hero-text);
-      background:
-        radial-gradient(900px 500px at 85% -10%, var(--accent-soft), transparent 60%),
-        linear-gradient(160deg, var(--hero-bg) 0%, var(--hero-bg-2) 100%);
-      padding:64px 0 80px;
+      position:relative; overflow:hidden; color:var(--cream); padding:0;
+      min-height:calc(100svh - var(--header)); display:flex; align-items:center;
+      background:radial-gradient(900px 600px at 80% 10%, rgba(212,167,44,.14), transparent 62%), var(--ink);
+      background-size:cover; background-position:center;
     }
-    .hero::after{
-      content:""; position:absolute; inset:0; pointer-events:none; opacity:.06;
-      background-image:repeating-linear-gradient(135deg, #fff 0 1px, transparent 1px 14px);
+    .pole{ position:absolute; top:0; bottom:0; right:0; width:14px; overflow:hidden; }
+    .pole i{
+      position:absolute; left:0; right:0; top:-100%; height:300%;
+      background:repeating-linear-gradient(-45deg, var(--gold) 0 30px, var(--cream) 30px 60px, var(--ink) 60px 90px);
     }
-    .hero-grid{ position:relative; z-index:1; display:grid; gap:40px; align-items:center; }
-    .etiqueta{
-      display:inline-flex; align-items:center; gap:8px; padding:7px 14px; border-radius:999px;
-      background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14);
-      font-size:.85rem; font-weight:600; margin-bottom:18px;
+    .hero-inner{ position:relative; z-index:1; padding-top:44px; padding-bottom:44px; }
+    .etiqueta{ display:inline-flex; align-items:center; gap:8px; font-size:.82rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:18px; }
+    .etiqueta::before{ content:""; width:28px; height:2px; background:var(--gold); }
+    .hero h1{ font-size:clamp(3.2rem, 14.2vw, 5.5rem); margin-bottom:22px; padding-right:12px; }
+    .ln{ display:block; overflow:hidden; padding-top:.04em; }
+    .ln > span{ display:block; }
+    .ln.acc{ color:var(--gold); }
+    .hero-sub{ font-size:clamp(1.05rem, 2.6vw, 1.25rem); max-width:520px; opacity:.86; margin-bottom:28px; padding-right:14px; }
+    .ctas{ display:flex; flex-wrap:wrap; gap:12px; padding-right:14px; }
+    .ctas .btn{ flex:1 1 220px; }
+    @media (min-width:600px){ .ctas .btn{ flex:0 0 auto; } }
+    @media (min-width:900px){
+      .hero-inner{ padding-top:24px; padding-bottom:24px; }
+      .hero h1{ font-size:clamp(5.5rem, min(10.4vw, 15.5vh), 10rem); margin-bottom:16px; }
+      .hero-sub{ max-width:760px; margin-bottom:22px; }
+      .pole{ right:clamp(32px, 7vw, 120px); width:clamp(70px, 9vw, 130px); box-shadow:inset 18px 0 26px rgba(0,0,0,.45), inset -18px 0 26px rgba(0,0,0,.45); }
     }
-    .etiqueta i{ width:8px; height:8px; border-radius:50%; background:var(--accent); display:inline-block; }
-    .hero h1{ font-size:clamp(2.1rem, 8vw, 3.8rem); font-weight:800; margin-bottom:16px; }
-    .hero h1 em{ font-style:normal; color:var(--accent); }
-    .hero-sub{ font-size:clamp(1.05rem, 2.6vw, 1.2rem); opacity:.85; max-width:520px; margin-bottom:28px; }
-    .hero-ctas{ display:flex; flex-wrap:wrap; gap:12px; }
-    .hero-ctas .btn{ flex:1 1 200px; }
-    @media (min-width:600px){ .hero-ctas .btn{ flex:0 0 auto; } }
-    .hero-visual{
-      position:relative; aspect-ratio:4/5; max-height:520px; border-radius:24px; overflow:hidden;
-      background:linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
-      border:1px solid rgba(255,255,255,.12); display:grid; place-items:center;
-    }
-    .hero-visual img{ width:100%; height:100%; object-fit:cover; }
-    .hero-visual .ph{ text-align:center; opacity:.65; font-size:.9rem; padding:20px; }
-    .hero-visual .ph svg{ width:64px; height:64px; margin:0 auto 10px; color:var(--accent); }
-    @media (min-width:900px){ .hero{ padding:96px 0 110px; } .hero-grid{ grid-template-columns:1.15fr .85fr; } }
-    @media (max-width:899px){ .hero-visual{ display:none; } }
+
+    /* Cinta de servicios */
+    .cinta{ background:var(--gold); color:var(--ink); padding:18px 0; overflow:hidden; }
+    .cinta div{ white-space:nowrap; font:400 clamp(1.7rem, 5vw, 3rem)/1.2 Anton, sans-serif; text-transform:uppercase; }
+    .cinta div + div{ opacity:.55; }
 
     /* =========================================================
-       5. SERVICIOS
+       5. SERVICIOS — pila en móvil, recorrido horizontal en escritorio
        ========================================================= */
-    .cards{ display:grid; gap:16px; margin-top:32px; }
-    @media (min-width:640px){ .cards{ grid-template-columns:repeat(2,1fr); } }
-    @media (min-width:1000px){ .cards{ grid-template-columns:repeat(4,1fr); } }
+    .serv-head{ margin-bottom:28px; }
     .card{
-      background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
-      padding:24px; box-shadow:var(--shadow); transition:transform .25s, border-color .25s;
+      position:relative; background:var(--surface); border:1px solid var(--line); border-radius:6px;
+      padding:26px 24px; margin-bottom:16px; min-height:230px;
+      display:flex; flex-direction:column; justify-content:flex-end;
     }
-    .card:hover{ transform:translateY(-4px); border-color:var(--accent); }
-    .card .ico{
-      width:48px; height:48px; border-radius:14px; display:grid; place-items:center;
-      background:var(--accent-soft); color:var(--accent); margin-bottom:16px;
+    .card .num{ position:absolute; top:12px; right:20px; font:400 4.4rem/1 Anton, sans-serif; color:var(--accent-text); opacity:.32; }
+    .card .ico{ width:50px; height:50px; display:grid; place-items:center; background:var(--ink); color:var(--gold); border-radius:4px; margin-bottom:16px; }
+    .card h3{ font-size:1.8rem; margin-bottom:6px; }
+    .card p{ color:var(--muted); margin:0; }
+    @media (max-width:899px){
+      .card{ position:sticky; top:calc(var(--header) + 14px + var(--i) * 12px); }
     }
-    .card .ico svg{ width:24px; height:24px; }
-    .card h3{ font-size:1.1rem; margin-bottom:6px; }
-    .card p{ color:var(--muted); font-size:.95rem; margin:0; }
+    @media (min-width:900px){
+      .serv-track:not(.is-h){ display:grid; grid-template-columns:repeat(4,1fr); gap:16px; max-width:1200px; margin:0 auto; padding:0 32px; }
+      .serv-track:not(.is-h) .serv-head{ grid-column:1 / -1; }
+      .serv.is-h{ padding:0; }
+      .serv.is-h .serv-pin{ height:100vh; overflow:hidden; display:flex; align-items:center; padding-top:var(--header); }
+      .serv-track.is-h{ display:flex; align-items:stretch; gap:20px; width:max-content; padding:0 8vw; }
+      .serv-track.is-h .serv-head{ width:min(44vw, 560px); margin:0 40px 0 0; align-self:center; }
+      .serv-track.is-h .card{ width:min(34vw, 430px); min-height:min(62vh, 520px); margin:0; padding:34px; }
+      .serv-track.is-h .card .num{ font-size:8rem; }
+      .serv-track.is-h .card h3{ font-size:2.6rem; }
+    }
 
     /* =========================================================
-       6. SELECTOR DE WHATSAPP
+       6. CÓMO FUNCIONA — riel de progreso
        ========================================================= */
-    .selector{ background:var(--surface-2); }
-    .sel-box{
-      background:var(--surface); border:1px solid var(--line); border-radius:24px;
-      padding:24px; box-shadow:var(--shadow); max-width:760px; margin:28px auto 0;
+    .como{ background:var(--surface-2); }
+    .pasos{ position:relative; margin-top:34px; padding-left:64px; max-width:760px; }
+    .rail{ position:absolute; left:21px; top:8px; bottom:8px; width:3px; background:var(--line); }
+    .rail i{ position:absolute; inset:0; background:var(--accent-text); transform-origin:50% 0; transform:scaleY(1); }
+    .paso{ position:relative; padding-bottom:52px; transition:opacity .35s; }
+    .paso:last-of-type{ padding-bottom:0; }
+    .paso b{
+      position:absolute; left:-64px; top:0; width:45px; height:45px; border-radius:50%;
+      display:grid; place-items:center; background:var(--ink); color:var(--gold);
+      font:400 1.25rem Anton, sans-serif; transition:background .3s, color .3s;
     }
-    .chips{ display:flex; flex-wrap:wrap; gap:10px; margin:6px 0 20px; }
+    .paso h3{ font-size:clamp(1.9rem, 5vw, 2.8rem); margin-bottom:6px; }
+    .paso p{ color:var(--muted); margin:0; }
+    .anim .paso{ opacity:.35; }
+    .anim .paso.on{ opacity:1; }
+    .anim .paso.on b{ background:var(--gold); color:var(--ink); }
+
+    /* =========================================================
+       7. SELECTOR DE WHATSAPP
+       ========================================================= */
+    .sel-grid{ display:grid; gap:28px; align-items:center; }
+    @media (min-width:900px){ .sel-grid{ grid-template-columns:1fr 1fr; gap:64px; } }
+    .sel-box{ background:var(--ink); color:var(--cream); border-radius:6px; padding:24px; }
+    .sel-label{ font-weight:700; margin-bottom:12px; }
+    .chips{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:20px; }
     .chip{
-      padding:11px 16px; border-radius:999px; border:1.5px solid var(--line); background:transparent;
-      color:var(--text); font:600 .92rem Inter, sans-serif; cursor:pointer; transition:all .2s;
+      min-height:44px; padding:0 16px; border-radius:4px; border:1.5px solid rgba(243,237,224,.3); background:transparent;
+      color:var(--cream); font:700 .92rem "DM Sans", sans-serif; cursor:pointer; transition:background .2s, color .2s, border-color .2s;
     }
-    .chip[aria-pressed="true"]{ background:var(--accent); border-color:var(--accent); color:var(--accent-ink); }
-    .preview{
-      background:var(--surface-2); border-radius:14px; padding:14px 16px; font-size:.95rem;
-      color:var(--muted); margin-bottom:18px; border-left:4px solid var(--wa);
-      overflow-wrap:anywhere;
-    }
+    .chip[aria-pressed="true"]{ background:var(--gold); border-color:var(--gold); color:var(--ink); }
+    .preview{ background:rgba(243,237,224,.08); border-left:4px solid var(--wa); padding:14px 16px; font-size:.96rem; margin-bottom:18px; overflow-wrap:anywhere; }
     .sel-box .btn{ width:100%; }
-    .sel-label{ font-weight:700; margin-bottom:4px; }
 
     /* =========================================================
-       7. GALERÍA
+       8. GALERÍA
        ========================================================= */
-    .galeria{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:32px; }
-    @media (min-width:800px){ .galeria{ grid-template-columns:repeat(3,1fr); gap:16px; } }
+    #galeria{ padding-top:0; }
+    .galeria{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:28px; }
+    @media (min-width:900px){ .galeria{ grid-template-columns:repeat(3,1fr); gap:20px; padding-bottom:60px; } }
     .foto{
-      position:relative; aspect-ratio:1; border-radius:16px; overflow:hidden;
-      background:
-        repeating-linear-gradient(135deg, var(--surface-2) 0 10px, var(--surface) 10px 20px);
-      border:1px dashed var(--line); display:grid; place-items:center;
+      position:relative; aspect-ratio:4/5; overflow:hidden; border-radius:4px; display:grid; place-items:center;
+      background:repeating-linear-gradient(-45deg, var(--surface-2) 0 14px, var(--surface) 14px 28px);
+      border:1px solid var(--line);
     }
-    .foto img{ width:100%; height:100%; object-fit:cover; transition:transform .5s; }
-    .foto:hover img{ transform:scale(1.05); }
-    .foto span{ font-size:.85rem; color:var(--muted); font-weight:600; text-align:center; padding:8px; }
+    .foto img{ width:100%; height:100%; object-fit:cover; }
+    .foto span{ font-size:.85rem; font-weight:700; color:var(--muted); background:var(--surface); padding:4px 10px; border-radius:3px; }
 
     /* =========================================================
-       8. ANTES Y DESPUÉS
+       9. ANTES Y DESPUÉS
        ========================================================= */
-    .ba{
-      position:relative; max-width:760px; margin:32px auto 0; aspect-ratio:4/3;
-      border-radius:22px; overflow:hidden; box-shadow:var(--shadow); user-select:none; touch-action:pan-y;
-    }
+    #antes-despues{ padding-top:0; }
+    .ba{ position:relative; max-width:860px; margin:30px auto 0; aspect-ratio:4/3; border-radius:6px; overflow:hidden; user-select:none; touch-action:pan-y; }
     .ba-layer{ position:absolute; inset:0; display:grid; place-items:center; }
     .ba-layer img{ width:100%; height:100%; object-fit:cover; }
-    .ba-antes{ background:linear-gradient(135deg, #6b6b70, #3c3c40); }
-    .ba-despues{ background:linear-gradient(135deg, var(--hero-bg-2), var(--hero-bg)); clip-path:inset(0 0 0 50%); }
-    .ba-tag{
-      position:absolute; top:14px; padding:6px 12px; border-radius:999px; font-size:.78rem; font-weight:700;
-      background:rgba(0,0,0,.55); color:#fff; z-index:2;
-    }
-    .ba-tag.l{ left:14px; } .ba-tag.r{ right:14px; background:var(--accent); color:var(--accent-ink); }
-    .ba-ph{ color:rgba(255,255,255,.7); font-weight:600; font-size:.9rem; }
-    .ba-line{
-      position:absolute; top:0; bottom:0; left:50%; width:3px; background:#fff; transform:translateX(-50%);
-      z-index:3; pointer-events:none;
-    }
-    .ba-line::after{
-      content:"⟷"; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-      width:44px; height:44px; border-radius:50%; background:#fff; color:#111;
-      display:grid; place-items:center; font-weight:700; box-shadow:0 4px 14px rgba(0,0,0,.3);
-    }
-    .ba input{
-      position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:ew-resize; z-index:4; margin:0;
-    }
+    .ba-antes{ background:#55524C; }
+    .ba-despues{ background:var(--ink-2); clip-path:inset(0 0 0 50%); }
+    .ba-ph{ color:rgba(255,255,255,.72); font-weight:700; font-size:.9rem; }
+    .ba-tag{ position:absolute; top:14px; z-index:2; padding:6px 12px; font-size:.78rem; font-weight:700; border-radius:3px; background:rgba(0,0,0,.6); color:#fff; }
+    .ba-tag.l{ left:14px; }
+    .ba-tag.r{ right:14px; background:var(--gold); color:var(--ink); }
+    .ba-line{ position:absolute; top:0; bottom:0; left:50%; width:3px; background:var(--cream); transform:translateX(-50%); z-index:3; pointer-events:none; }
+    .ba-line::after{ content:"⟷"; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:46px; height:46px; border-radius:50%; background:var(--cream); color:var(--ink); display:grid; place-items:center; font-weight:700; }
+    .ba input{ position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:ew-resize; z-index:4; margin:0; }
 
     /* =========================================================
-       9. CÓMO FUNCIONA
+       10. RESEÑAS
        ========================================================= */
-    .pasos{ display:grid; gap:16px; margin-top:32px; counter-reset:paso; }
-    @media (min-width:800px){ .pasos{ grid-template-columns:repeat(3,1fr); } }
-    .paso{
-      position:relative; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
-      padding:26px 24px 24px;
-    }
-    .paso::before{
-      counter-increment:paso; content:counter(paso);
-      display:grid; place-items:center; width:42px; height:42px; border-radius:50%;
-      background:var(--accent); color:var(--accent-ink); font:800 1.1rem Sora, sans-serif; margin-bottom:14px;
-    }
-    .paso h3{ font-size:1.1rem; }
-    .paso p{ color:var(--muted); margin:0; font-size:.95rem; }
+    .resenas{ background:var(--ink); color:var(--cream); }
+    .resenas .eyebrow{ color:var(--gold); }
+    .res-grid{ display:grid; gap:36px; align-items:center; margin-top:18px; }
+    @media (min-width:900px){ .res-grid{ grid-template-columns:auto 1fr; gap:90px; } }
+    .r-num{ font:400 clamp(7rem, 30vw, 12rem)/1 Anton, sans-serif; color:var(--gold); }
+    .stars{ position:relative; display:inline-block; font-size:1.5rem; letter-spacing:3px; color:rgba(243,237,224,.25); line-height:1.2; }
+    .stars i{ position:absolute; left:0; top:0; width:96%; overflow:hidden; white-space:nowrap; font-style:normal; color:var(--gold); }
+    .r-txt{ opacity:.8; font-size:.95rem; margin:6px 0 0; }
+    .tags-title{ font-weight:700; margin-bottom:14px; }
+    .tags{ display:flex; flex-wrap:wrap; gap:10px; }
+    .tag{ padding:11px 16px; border-radius:4px; background:rgba(243,237,224,.09); font-weight:500; }
 
     /* =========================================================
-       10. RESEÑAS (espacios de relleno)
+       11. FAQ + CONTACTO
        ========================================================= */
-    .resenas{ background:var(--surface-2); }
-    .res-grid{ display:grid; gap:16px; margin-top:32px; }
-    @media (min-width:800px){ .res-grid{ grid-template-columns:repeat(3,1fr); } }
-    .res{
-      background:var(--surface); border:1px dashed var(--line); border-radius:var(--radius); padding:24px;
-      color:var(--muted); font-size:.95rem;
-    }
-    .res b{ display:block; color:var(--text); margin-top:12px; font-size:.9rem; }
-
-    /* =========================================================
-       11. FAQ
-       ========================================================= */
-    .faq{ max-width:780px; margin:32px auto 0; display:grid; gap:12px; }
-    details{
-      background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:0 20px;
-      transition:border-color .2s;
-    }
-    details[open]{ border-color:var(--accent); }
-    summary{
-      list-style:none; cursor:pointer; padding:18px 30px 18px 0; font-weight:600; position:relative;
-    }
+    .faq{ max-width:820px; margin-top:28px; }
+    details{ border-bottom:1px solid var(--line); }
+    summary{ list-style:none; cursor:pointer; padding:20px 34px 20px 0; font-weight:700; position:relative; }
     summary::-webkit-details-marker{ display:none; }
-    summary::after{
-      content:"+"; position:absolute; right:0; top:50%; transform:translateY(-50%);
-      font-size:1.4rem; color:var(--accent); transition:transform .25s;
-    }
+    summary::after{ content:"+"; position:absolute; right:0; top:50%; transform:translateY(-50%); font-size:1.5rem; color:var(--accent-text); transition:transform .25s; }
     details[open] summary::after{ transform:translateY(-50%) rotate(45deg); }
-    details p{ color:var(--muted); padding-bottom:18px; margin:0; }
+    details p{ color:var(--muted); padding-bottom:20px; margin:0; }
 
-    /* =========================================================
-       12. CONTACTO
-       ========================================================= */
-    .contacto-grid{ display:grid; gap:16px; margin-top:32px; }
+    #contacto{ padding-top:0; }
+    .contacto-grid{ display:grid; gap:12px; margin:26px 0 20px; }
     @media (min-width:800px){ .contacto-grid{ grid-template-columns:repeat(2,1fr); } }
-    .dato{
-      display:flex; gap:14px; align-items:flex-start; background:var(--surface);
-      border:1px solid var(--line); border-radius:var(--radius); padding:20px; text-decoration:none; min-width:0;
-    }
-    .dato .ico{
-      width:44px; height:44px; flex:none; border-radius:12px; display:grid; place-items:center;
-      background:var(--accent-soft); color:var(--accent);
-    }
-    .dato .ico svg{ width:22px; height:22px; }
-    .dato small{ display:block; color:var(--muted); font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; font-weight:700; }
+    .dato{ display:flex; gap:14px; align-items:flex-start; background:var(--surface); border:1px solid var(--line); border-radius:6px; padding:18px 20px; text-decoration:none; min-width:0; }
+    .dato .ico{ width:44px; height:44px; flex:none; display:grid; place-items:center; background:var(--ink); color:var(--gold); border-radius:4px; }
+    .dato small{ display:block; color:var(--muted); font-size:.76rem; text-transform:uppercase; letter-spacing:.1em; font-weight:700; }
     .dato strong{ display:block; font-size:1.05rem; overflow-wrap:anywhere; }
-    .dato .pend{ color:var(--muted); font-weight:500; font-style:italic; font-size:.98rem; }
 
     /* CTA final */
-    .cta-final{
-      color:var(--hero-text); text-align:center;
-      background:radial-gradient(700px 300px at 50% 0%, var(--accent-soft), transparent 70%), var(--hero-bg);
-    }
-    .cta-final .sec-sub{ color:inherit; opacity:.8; margin:0 auto 26px; }
-    .cta-final .hero-ctas{ justify-content:center; }
+    .cta-final{ background:var(--ink); color:var(--cream); text-align:center; overflow:hidden; }
+    .cta-final h2{ font-size:clamp(3.2rem, 14vw, 11rem); margin-bottom:.2em; }
+    .cta-final p{ opacity:.82; margin-bottom:26px; }
+    .cta-final .ctas{ justify-content:center; padding-right:0; }
 
-    footer{
-      background:var(--hero-bg); color:var(--hero-text); opacity:.95; padding:28px 0 100px;
-      font-size:.85rem; border-top:1px solid rgba(255,255,255,.08);
-    }
-    footer .wrap{ display:flex; flex-wrap:wrap; gap:8px 20px; justify-content:space-between; }
+    footer{ background:var(--ink); color:var(--cream); padding:26px 0 100px; font-size:.85rem; border-top:1px solid rgba(243,237,224,.12); }
+    footer .wrap{ display:flex; flex-wrap:wrap; gap:6px 20px; justify-content:space-between; }
     footer span{ opacity:.7; }
-    @media (min-width:900px){ footer{ padding-bottom:28px; } }
-
-    /* Barra de muestra */
-    .muestra{
-      background:var(--accent); color:var(--accent-ink); text-align:center;
-      font-size:.8rem; font-weight:600; padding:7px 16px; line-height:1.4;
-    }
-    .muestra b{ letter-spacing:.08em; }
-    .marca-txt{ display:flex; flex-direction:column; min-width:0; line-height:1.2; }
-    .marca-sub{ font-size:.72rem; opacity:.7; font-weight:500; }
-
-    /* Calificación + etiquetas */
-    .rating{
-      display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; margin-top:28px;
-      background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
-      padding:20px 22px; box-shadow:var(--shadow);
-    }
-    .rating .num{ font:800 2.2rem Sora, sans-serif; line-height:1; }
-    .rating .stars{ color:var(--accent); font-size:1.2rem; letter-spacing:2px; }
-    .rating small{ display:block; color:var(--muted); font-size:.85rem; }
-    .tags-title{ font-weight:700; margin:24px 0 10px; }
-    .tags{ display:flex; flex-wrap:wrap; gap:10px; }
-    .tag{
-      padding:9px 14px; border-radius:999px; background:var(--accent-soft); color:var(--text);
-      border:1px solid var(--line); font-size:.9rem; font-weight:600;
-    }
-    .mapa-btn{ margin-top:18px; }
+    @media (min-width:900px){ footer{ padding-bottom:26px; } }
 
     /* Barra fija móvil */
     .barra{
       position:fixed; left:0; right:0; bottom:0; z-index:60; display:grid; grid-template-columns:1fr 1fr; gap:10px;
-      padding:10px 16px calc(10px + env(safe-area-inset-bottom));
-      background:color-mix(in srgb, var(--surface) 92%, transparent);
-      backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); border-top:1px solid var(--line);
-      transform:translateY(110%); transition:transform .35s;
+      padding:10px 16px calc(10px + env(safe-area-inset-bottom)); background:var(--ink);
+      border-top:1px solid rgba(243,237,224,.14); transform:translateY(110%); transition:transform .35s;
     }
     .barra.on{ transform:none; }
     .barra .btn{ min-height:48px; padding:0 12px; font-size:.95rem; }
     @media (min-width:900px){ .barra{ display:none; } }
-
-    /* =========================================================
-       13. ANIMACIONES
-       ========================================================= */
-    .reveal{ opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease; }
-    .reveal.in{ opacity:1; transform:none; }
-    .hero .reveal{ transition-duration:.9s; }
-    @keyframes pulso{ 0%,100%{ box-shadow:0 0 0 0 rgba(37,211,102,.45);} 50%{ box-shadow:0 0 0 12px rgba(37,211,102,0);} }
-    .hero .btn-wa{ animation:pulso 2.6s infinite; }
-    @media (prefers-reduced-motion: reduce){
-      *{ animation:none !important; transition:none !important; scroll-behavior:auto !important; }
-      .reveal{ opacity:1; transform:none; }
-    }
+    @media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
   </style>
 </head>
 <body>
 
-  <div class="muestra" id="muestra" hidden><b>MUESTRA</b> de diseño preparada para <span data-k="nombre"></span></div>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></symbol>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-estrella" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8-6.2-3.2L5.8 21 7 14.2 2 9.3l6.9-1z"/></symbol>
+    <symbol id="i-tijeras" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></symbol>
+    <symbol id="i-navaja" viewBox="0 0 24 24"><path d="M3 21l7-7"/><path d="M10 14l9.5-9.5a2.1 2.1 0 0 1 0 3L13 14z"/><path d="M8 16l2-2"/></symbol>
+    <symbol id="i-barba" viewBox="0 0 24 24"><path d="M5 8c0 7 3 12 7 12s7-5 7-12"/><path d="M5 8h14"/><path d="M9 13c1 .7 2 1 3 1s2-.3 3-1"/></symbol>
+    <symbol id="i-nino" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/><path d="M10 7h.01M14 7h.01"/></symbol>
+    <symbol id="i-luna" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+    <symbol id="i-sol" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  </svg>
+
+  <div class="muestra"><b>MUESTRA</b> de diseño preparada para Manny's New Look Barber Shop</div>
 
   <header>
     <div class="wrap nav">
       <a class="marca" href="#inicio">
-        <span class="logo" id="logo">MN</span>
-        <span class="marca-txt"><span class="marca-nombre" data-k="nombre">Manny's New Look Barber Shop</span><span class="marca-sub" id="marcaSub" hidden></span></span>
+        <span class="logo">MN</span>
+        <span class="marca-txt"><span class="marca-nombre">Manny's New Look Barber Shop</span><span class="marca-sub">Barbería</span></span>
       </a>
       <nav class="nav-links" aria-label="Secciones">
         <a href="#servicios">Servicios</a>
-        <a href="#galeria">Galería</a>
         <a href="#como">Cómo funciona</a>
+        <a href="#galeria">Galería</a>
         <a href="#faq">Preguntas</a>
         <a href="#contacto">Contacto</a>
       </nav>
       <div class="nav-acc">
         <button class="modo-btn" id="modoBtn" type="button" aria-label="Cambiar modo claro u oscuro"></button>
-        <a class="btn btn-wa nav-wa" data-wa href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-wa nav-wa" data-wa href="https://wa.me/17874546041" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
+    <div class="progreso" aria-hidden="true"></div>
   </header>
 
   <main>
     <!-- HERO -->
     <section class="hero" id="inicio">
-      <div class="wrap hero-grid">
-        <div>
-          <div class="etiqueta reveal"><i></i><span id="etiqueta"></span></div>
-          <h1 class="reveal" id="heroTitulo"></h1>
-          <p class="hero-sub reveal" id="heroSub"></p>
-          <div class="hero-ctas reveal">
-            <a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener"><span data-icon="wa"></span><span id="ctaWa"></span></a>
-            <a class="btn btn-ghost" data-tel href="#"><span data-icon="tel"></span><span id="ctaTel"></span></a>
-          </div>
+      <div class="pole" aria-hidden="true"><i></i></div>
+      <div class="wrap hero-inner">
+        <span class="etiqueta">Barbería · San Juan</span>
+        <h1 class="disp">
+          <span class="ln"><span>Cortes que</span></span>
+          <span class="ln"><span>se notan.</span></span>
+          <span class="ln acc"><span>Sal como nuevo.</span></span>
+        </h1>
+        <p class="hero-sub">Tu barbería en San Juan. Reserva tu turno por WhatsApp y llega sin esperar.</p>
+        <div class="ctas">
+          <a class="btn btn-wa" data-wa href="https://wa.me/17874546041" target="_blank" rel="noopener"><svg class="ic-fill"><use href="#i-wa"/></svg>Reservar por WhatsApp</a>
+          <a class="btn btn-ghost" href="tel:7874546041"><svg class="ic"><use href="#i-tel"/></svg>Llamar</a>
         </div>
-        <div class="hero-visual reveal" id="heroVisual"></div>
       </div>
     </section>
 
+    <div class="cinta" aria-hidden="true">
+      <div id="cinta1">Corte clásico ✦ Fade y degradados ✦ Barba y perfilado ✦ Corte para niños ✦ Corte clásico ✦ Fade y degradados ✦ Barba y perfilado ✦ Corte para niños ✦ Corte clásico ✦ Fade y degradados ✦ Barba y perfilado ✦ Corte para niños</div>
+    </div>
+
     <!-- SERVICIOS -->
-    <section id="servicios">
+    <section class="serv" id="servicios">
+      <div class="serv-pin">
+        <div class="serv-track wrap" id="servTrack">
+          <div class="serv-head">
+            <span class="eyebrow">Servicios</span>
+            <h2 class="disp sec-title">Lo que hacemos</h2>
+            <p class="nota">Ejemplo de servicios: se ajustan a los que realmente ofrece la barbería.</p>
+          </div>
+          <article class="card" style="--i:0"><span class="num">01</span><div class="ico"><svg class="ic"><use href="#i-tijeras"/></svg></div><h3 class="disp">Corte clásico</h3><p>El corte de siempre, bien hecho.</p></article>
+          <article class="card" style="--i:1"><span class="num">02</span><div class="ico"><svg class="ic"><use href="#i-navaja"/></svg></div><h3 class="disp">Fade y degradados</h3><p>Degradados a tu gusto.</p></article>
+          <article class="card" style="--i:2"><span class="num">03</span><div class="ico"><svg class="ic"><use href="#i-barba"/></svg></div><h3 class="disp">Barba y perfilado</h3><p>Arreglo de barba y líneas definidas.</p></article>
+          <article class="card" style="--i:3"><span class="num">04</span><div class="ico"><svg class="ic"><use href="#i-nino"/></svg></div><h3 class="disp">Corte para niños</h3><p>Para los más pequeños de la casa.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="como" id="como">
       <div class="wrap">
-        <span class="eyebrow reveal">Servicios</span>
-        <h2 class="sec-title reveal" id="servTitulo"></h2>
-        <div class="cards" id="servicios-lista"></div>
-        <p class="nota reveal" id="servNota"></p>
+        <span class="eyebrow" data-r>Cómo funciona</span>
+        <h2 class="disp sec-title" data-r>Así de fácil</h2>
+        <div class="pasos" id="pasos">
+          <div class="rail" aria-hidden="true"><i id="railFill"></i></div>
+          <div class="paso"><b>1</b><h3 class="disp">Escribes por WhatsApp</h3><p>Dinos qué servicio quieres.</p></div>
+          <div class="paso"><b>2</b><h3 class="disp">Escoges tu turno</h3><p>Te decimos qué turnos hay disponibles.</p></div>
+          <div class="paso"><b>3</b><h3 class="disp">Sales con tu corte</h3><p>Llegas a tu hora y sales como nuevo.</p></div>
+        </div>
       </div>
     </section>
 
     <!-- SELECTOR WHATSAPP -->
-    <section class="selector" id="reservar">
-      <div class="wrap">
-        <div style="text-align:center">
-          <span class="eyebrow reveal">WhatsApp</span>
-          <h2 class="sec-title reveal" id="selTitulo"></h2>
-          <p class="sec-sub reveal" style="margin:0 auto" id="selSub"></p>
+    <section id="reservar">
+      <div class="wrap sel-grid">
+        <div>
+          <span class="eyebrow" data-r>WhatsApp</span>
+          <h2 class="disp sec-title" data-r>Reserva tu turno</h2>
+          <p class="sec-sub" data-r>Escoge el servicio y se arma tu mensaje.</p>
         </div>
-        <div class="sel-box reveal">
-          <p class="sel-label" id="selLabel"></p>
-          <div class="chips" id="chips" role="group"></div>
-          <div class="preview" id="preview" aria-live="polite"></div>
-          <a class="btn btn-wa" id="selBtn" href="#" target="_blank" rel="noopener"><span data-icon="wa"></span>Enviar por WhatsApp</a>
+        <div class="sel-box" data-r>
+          <p class="sel-label">¿Qué servicio quieres?</p>
+          <div class="chips" id="chips" role="group" aria-label="Servicio">
+            <button type="button" class="chip" aria-pressed="true" data-v="corte clásico">Corte clásico</button>
+            <button type="button" class="chip" aria-pressed="false" data-v="fade">Fade y degradados</button>
+            <button type="button" class="chip" aria-pressed="false" data-v="arreglo de barba y perfilado">Barba y perfilado</button>
+            <button type="button" class="chip" aria-pressed="false" data-v="corte para niño">Corte para niños</button>
+          </div>
+          <div class="preview" id="preview" aria-live="polite">“Hola Manny, quiero reservar un corte clásico. ¿Qué turno tienen disponible?”</div>
+          <a class="btn btn-wa" id="selBtn" href="https://wa.me/17874546041" target="_blank" rel="noopener"><svg class="ic-fill"><use href="#i-wa"/></svg>Enviar por WhatsApp</a>
         </div>
       </div>
     </section>
@@ -461,23 +421,28 @@
     <!-- GALERÍA -->
     <section id="galeria">
       <div class="wrap">
-        <span class="eyebrow reveal">Galería</span>
-        <h2 class="sec-title reveal" id="galTitulo"></h2>
-        <div class="galeria" id="galeria-lista"></div>
+        <span class="eyebrow" data-r>Galería</span>
+        <h2 class="disp sec-title" data-r>Nuestros cortes</h2>
+        <div class="galeria" id="galeriaLista">
+          <div class="foto-w"><div class="foto" data-r><span>Foto de corte</span></div></div>
+          <div class="foto-w"><div class="foto" data-r><span>Foto de corte</span></div></div>
+          <div class="foto-w"><div class="foto" data-r><span>Foto de corte</span></div></div>
+          <div class="foto-w"><div class="foto" data-r><span>Foto de corte</span></div></div>
+          <div class="foto-w"><div class="foto" data-r><span>Foto de corte</span></div></div>
+          <div class="foto-w"><div class="foto" data-r><span>Foto de corte</span></div></div>
+        </div>
       </div>
     </section>
 
     <!-- ANTES Y DESPUÉS -->
-    <section id="antes-despues" style="padding-top:0">
+    <section id="antes-despues">
       <div class="wrap">
-        <div style="text-align:center">
-          <span class="eyebrow reveal">Resultado</span>
-          <h2 class="sec-title reveal" id="baTitulo"></h2>
-          <p class="sec-sub reveal" style="margin:0 auto">Desliza para comparar.</p>
-        </div>
-        <div class="ba reveal" id="ba">
-          <div class="ba-layer ba-antes" id="baAntes"></div>
-          <div class="ba-layer ba-despues" id="baDespues"></div>
+        <span class="eyebrow" data-r>Resultado</span>
+        <h2 class="disp sec-title" data-r>Antes y después de tu corte</h2>
+        <p class="sec-sub" data-r>Desliza para comparar.</p>
+        <div class="ba" id="ba">
+          <div class="ba-layer ba-antes" id="baAntes"><span class="ba-ph">Foto de antes</span></div>
+          <div class="ba-layer ba-despues" id="baDespues"><span class="ba-ph">Foto de después</span></div>
           <span class="ba-tag l">Antes</span>
           <span class="ba-tag r">Después</span>
           <div class="ba-line" id="baLine"></div>
@@ -486,55 +451,69 @@
       </div>
     </section>
 
-    <!-- CÓMO FUNCIONA -->
-    <section id="como" style="background:var(--surface-2)">
-      <div class="wrap">
-        <span class="eyebrow reveal">Cómo funciona</span>
-        <h2 class="sec-title reveal">Así de fácil</h2>
-        <div class="pasos" id="pasos-lista"></div>
-      </div>
-    </section>
-
     <!-- RESEÑAS -->
-    <section class="resenas" id="resenas" style="padding-top:0">
+    <section class="resenas" id="resenas">
       <div class="wrap">
-        <span class="eyebrow reveal">Reseñas</span>
-        <h2 class="sec-title reveal">Lo que dicen los clientes</h2>
-        <div id="rating-box"></div>
-        <div class="res-grid" id="resenas-lista"></div>
+        <span class="eyebrow" data-r>Reseñas</span>
+        <h2 class="disp sec-title" data-r>Lo que dicen los clientes</h2>
+        <div class="res-grid">
+          <div id="rBox">
+            <div class="r-num" id="rNum">4.8</div>
+            <span class="stars" role="img" aria-label="4.8 de 5 estrellas">★★★★★<i id="rStars">★★★★★</i></span>
+            <p class="r-txt">Calificación en Google · <span id="rCount">120</span> reseñas</p>
+          </div>
+          <div>
+            <p class="tags-title" data-r>Los clientes destacan</p>
+            <div class="tags">
+              <span class="tag" data-r>Buen trato del dueño</span>
+              <span class="tag" data-r>Barberos profesionales</span>
+              <span class="tag" data-r>Sin apuros</span>
+              <span class="tag" data-r>Clientes que vuelven cada semana</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- FAQ -->
     <section id="faq">
       <div class="wrap">
-        <div style="text-align:center">
-          <span class="eyebrow reveal">Preguntas frecuentes</span>
-          <h2 class="sec-title reveal">¿Tienes dudas?</h2>
+        <span class="eyebrow" data-r>Preguntas frecuentes</span>
+        <h2 class="disp sec-title" data-r>¿Tienes dudas?</h2>
+        <div class="faq">
+          <details data-r><summary>¿Hay que reservar o se puede llegar sin cita?</summary><p>Escríbenos por WhatsApp y te confirmamos cómo está el turno ese día.</p></details>
+          <details data-r><summary>¿Cortan a niños?</summary><p>Escríbenos por WhatsApp y te confirmamos el turno para el nene o la nena.</p></details>
+          <details data-r><summary>¿Cómo pago?</summary><p>Escríbenos por WhatsApp y te confirmamos los métodos de pago.</p></details>
+          <details data-r><summary>¿Dónde están ubicados?</summary><p>Estamos en 1110 Av. Américo Miranda, San Juan, PR 00921.</p></details>
         </div>
-        <div class="faq" id="faq-lista"></div>
       </div>
     </section>
 
     <!-- CONTACTO -->
-    <section id="contacto" style="padding-top:0">
+    <section id="contacto">
       <div class="wrap">
-        <span class="eyebrow reveal">Contacto</span>
-        <h2 class="sec-title reveal">Comunícate con nosotros</h2>
-        <p class="sec-sub reveal" id="contactoSub"></p>
-        <div class="contacto-grid" id="contacto-lista"></div>
-        <div id="mapa-box"></div>
+        <span class="eyebrow" data-r>Contacto</span>
+        <h2 class="disp sec-title" data-r>Comunícate con nosotros</h2>
+        <p class="sec-sub" data-r>Pregunta por Manny.</p>
+        <div class="contacto-grid">
+          <a class="dato" data-r href="tel:7874546041"><div class="ico"><svg class="ic"><use href="#i-tel"/></svg></div><div><small>Teléfono</small><strong>787-454-6041</strong></div></a>
+          <a class="dato" data-r data-wa href="https://wa.me/17874546041" target="_blank" rel="noopener"><div class="ico"><svg class="ic ic-fill"><use href="#i-wa"/></svg></div><div><small>WhatsApp</small><strong>787-454-6041</strong></div></a>
+          <div class="dato" data-r><div class="ico"><svg class="ic"><use href="#i-pin"/></svg></div><div><small>Ubicación</small><strong>1110 Av. Américo Miranda, San Juan, PR 00921</strong></div></div>
+          <div class="dato" data-r><div class="ico"><svg class="ic"><use href="#i-reloj"/></svg></div><div><small>Horario</small><strong>Lunes a sábado, 9:00 AM a 7:00 PM. Domingo cerrado.</strong></div></div>
+          <div class="dato" data-r><div class="ico"><svg class="ic"><use href="#i-estrella"/></svg></div><div><small>Google</small><strong>4.8 ★ · 120 reseñas</strong></div></div>
+        </div>
+        <a class="btn btn-gold" data-r target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Manny%27s%20New%20Look%20Barber%20Shop%2C%201110%20Av.%20Am%C3%A9rico%20Miranda%2C%20San%20Juan%2C%20PR%2C%2000921"><svg class="ic"><use href="#i-pin"/></svg>Cómo llegar</a>
       </div>
     </section>
 
     <!-- CTA FINAL -->
     <section class="cta-final">
       <div class="wrap">
-        <h2 class="sec-title reveal" id="ctaTitulo"></h2>
-        <p class="sec-sub reveal" id="ctaSub"></p>
-        <div class="hero-ctas reveal">
-          <a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener"><span data-icon="wa"></span><span data-k="ctaWa"></span></a>
-          <a class="btn btn-ghost" data-tel href="#"><span data-icon="tel"></span><span data-k="ctaTel"></span></a>
+        <h2 class="disp" id="ctaTitulo">¿Te toca recorte?</h2>
+        <p>Escríbenos por WhatsApp y reserva tu turno.</p>
+        <div class="ctas">
+          <a class="btn btn-wa" data-wa href="https://wa.me/17874546041" target="_blank" rel="noopener"><svg class="ic-fill"><use href="#i-wa"/></svg>Reservar por WhatsApp</a>
+          <a class="btn btn-ghost" href="tel:7874546041"><svg class="ic"><use href="#i-tel"/></svg>Llamar</a>
         </div>
       </div>
     </section>
@@ -542,44 +521,19 @@
 
   <footer>
     <div class="wrap">
-      <strong>© <span id="anio"></span> <span data-k="nombre"></span></strong>
-      <span id="footerTel"></span>
+      <strong>© <span id="anio">2026</span> Manny's New Look Barber Shop</strong>
+      <span>Tel. / WhatsApp 787-454-6041</span>
     </div>
   </footer>
 
   <div class="barra" id="barra">
-    <a class="btn btn-wa" data-wa href="#" target="_blank" rel="noopener"><span data-icon="wa"></span>WhatsApp</a>
-    <a class="btn btn-accent" data-tel href="#"><span data-icon="tel"></span>Llamar</a>
+    <a class="btn btn-wa" data-wa href="https://wa.me/17874546041" target="_blank" rel="noopener"><svg class="ic-fill"><use href="#i-wa"/></svg>WhatsApp</a>
+    <a class="btn btn-gold" href="tel:7874546041"><svg class="ic"><use href="#i-tel"/></svg>Llamar</a>
   </div>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script>
-  /* =========================================================
-     DATOS DEL NEGOCIO — se pueden sobreescribir con la URL:
-     index.html?n=Nombre&t=7870000000&z=Pueblo&nicho=barberia&tema=negro
-     (opcionales: d=Dirección, h=Horario, du=Dueño)
-     Si un dato está vacío, se muestra "Se confirma con el negocio".
-     Los campos opcionales de abajo (subtitulo, codigoPostal,
-     horarioSchema, rating, resenas, destacan, muestra) ocultan
-     su bloque cuando están vacíos.
-     ========================================================= */
-  const DATOS = {
-    nombre: "Manny's New Look Barber Shop",
-    subtitulo: "Barbería",
-    telefono: "7874546041",
-    pueblo: "San Juan",
-    direccion: "1110 Av. Américo Miranda",
-    codigoPostal: "00921",
-    horario: "Lunes a sábado, 9:00 AM a 7:00 PM. Domingo cerrado.",
-    horarioSchema: [{ dias: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], abre: "09:00", cierra: "19:00" }],
-    dueno: "Manny",
-    rating: "4.8",
-    resenas: "120",
-    destacan: ["Buen trato del dueño", "Barberos profesionales", "Sin apuros", "Clientes que vuelven cada semana"],
-    muestra: true,
-    nicho: "barberia",
-    tema: "negro"
-  };
-
   /* =========================================================
      IMAGES — pon URLs (o rutas relativas) de fotos reales.
      Vacío = se muestra el espacio de relleno.
@@ -591,402 +545,48 @@
     despues: ""
   };
 
-  /* =========================================================
-     PRESETS POR NICHO
-     ========================================================= */
-  const PRESETS = {
-    construccion: {
-      tipoSchema: "GeneralContractor",
-      tema: "naranja",
-      icono: "casa",
-      etiqueta: "Construcción · {pueblo}",
-      etiquetaSinPueblo: "Construcción",
-      titulo: "Tu proyecto, <em>bien hecho</em> desde el principio.",
-      sub: "Cuéntanos qué quieres construir o remodelar y te orientamos por WhatsApp.",
-      ctaWa: "Cotizar por WhatsApp",
-      ctaTel: "Llamar",
-      servTitulo: "Lo que hacemos",
-      servicios: [
-        { icono: "casa", titulo: "Construcción nueva", texto: "Desde la base hasta la terminación." },
-        { icono: "martillo", titulo: "Remodelaciones", texto: "Cocinas, baños y espacios interiores." },
-        { icono: "techo", titulo: "Techos y sellado", texto: "Reparación e impermeabilización." },
-        { icono: "regla", titulo: "Ampliaciones", texto: "Más espacio para tu casa o negocio." }
-      ],
-      servNota: "Ejemplo de servicios: se ajustan a los que realmente ofrece el negocio.",
-      selTitulo: "Cuéntanos tu proyecto",
-      selSub: "Escoge el tipo de proyecto y se arma tu mensaje.",
-      selLabel: "¿Qué proyecto tienes?",
-      selOpciones: [
-        { label: "Construcción nueva", valor: "una construcción nueva" },
-        { label: "Remodelación", valor: "una remodelación" },
-        { label: "Techo", valor: "un trabajo de techo" },
-        { label: "Ampliación", valor: "una ampliación" }
-      ],
-      selMensaje: "Hola, me interesa cotizar {valor}. ¿Podemos coordinar una visita?",
-      galTitulo: "Proyectos",
-      galEtiqueta: "Foto de proyecto",
-      baTitulo: "Antes y después del proyecto",
-      pasos: [
-        { titulo: "Nos escribes", texto: "Cuéntanos por WhatsApp qué necesitas." },
-        { titulo: "Coordinamos una visita", texto: "Vemos el espacio y hablamos del trabajo." },
-        { titulo: "Empezamos el proyecto", texto: "Te mantenemos al tanto en cada etapa." }
-      ],
-      faq: [
-        { p: "¿Dan estimados?", r: "Escríbenos por WhatsApp con los detalles y te confirmamos cómo trabajamos los estimados." },
-        { p: "¿En qué pueblos trabajan?", r: "Escríbenos por WhatsApp y te confirmamos si llegamos a tu área." },
-        { p: "¿Cuánto tarda un proyecto?", r: "Depende del trabajo. Escríbenos y te orientamos." },
-        { p: "¿Cómo pago?", r: "Escríbenos por WhatsApp y te confirmamos los métodos de pago." }
-      ],
-      ctaTitulo: "¿Listo para empezar?",
-      ctaSub: "Escríbenos por WhatsApp y hablamos de tu proyecto."
-    },
-
-    solar: {
-      tipoSchema: "HomeAndConstructionBusiness",
-      tema: "verde",
-      icono: "sol",
-      etiqueta: "Energía solar · {pueblo}",
-      etiquetaSinPueblo: "Energía solar",
-      titulo: "Energía solar para tu casa, <em>sin complicaciones</em>.",
-      sub: "Pregunta por WhatsApp y te orientamos sobre el sistema que te conviene.",
-      ctaWa: "Orientación por WhatsApp",
-      ctaTel: "Llamar",
-      servTitulo: "Lo que hacemos",
-      servicios: [
-        { icono: "panel", titulo: "Placas solares", texto: "Instalación de sistemas fotovoltaicos." },
-        { icono: "bateria", titulo: "Baterías", texto: "Respaldo para cuando se va la luz." },
-        { icono: "sol", titulo: "Calentadores solares", texto: "Agua caliente con energía del sol." },
-        { icono: "llave", titulo: "Mantenimiento", texto: "Revisión y limpieza del sistema." }
-      ],
-      servNota: "Ejemplo de servicios: se ajustan a los que realmente ofrece el negocio.",
-      selTitulo: "Cuéntanos qué buscas",
-      selSub: "Escoge una opción y se arma tu mensaje.",
-      selLabel: "¿Qué te interesa?",
-      selOpciones: [
-        { label: "Placas solares", valor: "placas solares" },
-        { label: "Baterías", valor: "baterías" },
-        { label: "Calentador solar", valor: "un calentador solar" },
-        { label: "Mantenimiento", valor: "mantenimiento de mi sistema" }
-      ],
-      selMensaje: "Hola, me interesa información sobre {valor}. ¿Me pueden orientar?",
-      galTitulo: "Instalaciones",
-      galEtiqueta: "Foto de instalación",
-      baTitulo: "Antes y después de la instalación",
-      pasos: [
-        { titulo: "Nos escribes", texto: "Cuéntanos sobre tu casa y tu consumo." },
-        { titulo: "Te orientamos", texto: "Te explicamos las opciones disponibles." },
-        { titulo: "Instalamos", texto: "Coordinamos la instalación contigo." }
-      ],
-      faq: [
-        { p: "¿Cuánto cuesta un sistema?", r: "Depende de tu casa y tu consumo. Escríbenos por WhatsApp y te orientamos." },
-        { p: "¿Ofrecen financiamiento?", r: "Escríbenos por WhatsApp y te confirmamos las opciones." },
-        { p: "¿Funciona cuando se va la luz?", r: "Depende del sistema. Escríbenos y te explicamos." },
-        { p: "¿En qué pueblos trabajan?", r: "Escríbenos por WhatsApp y te confirmamos si llegamos a tu área." }
-      ],
-      ctaTitulo: "¿Quieres saber más?",
-      ctaSub: "Escríbenos por WhatsApp y te orientamos."
-    },
-
-    dental: {
-      tipoSchema: "Dentist",
-      tema: "azul",
-      icono: "diente",
-      etiqueta: "Oficina dental · {pueblo}",
-      etiquetaSinPueblo: "Oficina dental",
-      titulo: "Cuida tu sonrisa <em>con calma</em>.",
-      sub: "Pide tu cita por WhatsApp y te confirmamos el horario.",
-      ctaWa: "Pedir cita por WhatsApp",
-      ctaTel: "Llamar",
-      servTitulo: "Servicios",
-      servicios: [
-        { icono: "diente", titulo: "Limpieza", texto: "Limpieza y evaluación general." },
-        { icono: "sonrisa", titulo: "Blanqueamiento", texto: "Para una sonrisa más clara." },
-        { icono: "llave", titulo: "Empastes", texto: "Tratamiento de caries." },
-        { icono: "nino", titulo: "Odontología para niños", texto: "Atención para los más pequeños." }
-      ],
-      servNota: "Ejemplo de servicios: se ajustan a los que realmente ofrece la oficina.",
-      selTitulo: "Pide tu cita",
-      selSub: "Escoge el servicio y se arma tu mensaje.",
-      selLabel: "¿Qué servicio necesitas?",
-      selOpciones: [
-        { label: "Limpieza", valor: "una limpieza" },
-        { label: "Blanqueamiento", valor: "un blanqueamiento" },
-        { label: "Empaste", valor: "un empaste" },
-        { label: "Cita para niño", valor: "una cita para mi hijo/a" }
-      ],
-      selMensaje: "Hola, quiero pedir cita para {valor}. ¿Qué horario tienen disponible?",
-      galTitulo: "Nuestra oficina",
-      galEtiqueta: "Foto del consultorio",
-      baTitulo: "Antes y después del tratamiento",
-      pasos: [
-        { titulo: "Nos escribes", texto: "Cuéntanos qué necesitas por WhatsApp." },
-        { titulo: "Escoges tu cita", texto: "Te damos las horas disponibles." },
-        { titulo: "Te atendemos", texto: "Llegas a tu cita y listo." }
-      ],
-      faq: [
-        { p: "¿Aceptan planes médicos?", r: "Escríbenos por WhatsApp y te confirmamos." },
-        { p: "¿Atienden emergencias?", r: "Escríbenos o llámanos y te orientamos." },
-        { p: "¿Atienden niños?", r: "Escríbenos por WhatsApp y te confirmamos." },
-        { p: "¿Dónde están ubicados?", r: "Escríbenos por WhatsApp y te enviamos la dirección." }
-      ],
-      ctaTitulo: "¿Necesitas una cita?",
-      ctaSub: "Escríbenos por WhatsApp y te confirmamos el horario."
-    },
-
-    barberia: {
-      tipoSchema: "HairSalon",
-      tema: "negro",
-      icono: "tijeras",
-      etiqueta: "Barbería · {pueblo}",
-      etiquetaSinPueblo: "Barbería",
-      titulo: "Cortes que se notan. <em>Sal como nuevo.</em>",
-      sub: "Reserva tu turno por WhatsApp y llega sin esperar.",
-      subConPueblo: "Tu barbería en {pueblo}. Reserva tu turno por WhatsApp y llega sin esperar.",
-      ctaWa: "Reservar por WhatsApp",
-      ctaTel: "Llamar",
-      servTitulo: "Lo que hacemos",
-      servicios: [
-        { icono: "tijeras", titulo: "Corte clásico", texto: "El corte de siempre, bien hecho." },
-        { icono: "navaja", titulo: "Fade y degradados", texto: "Degradados a tu gusto." },
-        { icono: "barba", titulo: "Barba y perfilado", texto: "Arreglo de barba y líneas definidas." },
-        { icono: "nino", titulo: "Corte para niños", texto: "Para los más pequeños de la casa." }
-      ],
-      servNota: "Ejemplo de servicios: se ajustan a los que realmente ofrece la barbería.",
-      selTitulo: "Reserva tu turno",
-      selSub: "Escoge el servicio y se arma tu mensaje.",
-      selLabel: "¿Qué servicio quieres?",
-      selOpciones: [
-        { label: "Corte clásico", valor: "corte clásico" },
-        { label: "Fade y degradados", valor: "fade" },
-        { label: "Barba y perfilado", valor: "arreglo de barba y perfilado" },
-        { label: "Corte para niños", valor: "corte para niño" }
-      ],
-      selMensaje: "Hola, quiero reservar un {valor}. ¿Qué turno tienen disponible?",
-      galTitulo: "Nuestros cortes",
-      galEtiqueta: "Foto de corte",
-      baTitulo: "Antes y después de tu corte",
-      pasos: [
-        { titulo: "Escribes por WhatsApp", texto: "Dinos qué servicio quieres." },
-        { titulo: "Escoges tu turno", texto: "Te decimos qué turnos hay disponibles." },
-        { titulo: "Sales con tu corte", texto: "Llegas a tu hora y sales como nuevo." }
-      ],
-      faq: [
-        { p: "¿Hay que reservar o se puede llegar sin cita?", r: "Escríbenos por WhatsApp y te confirmamos cómo está el turno ese día." },
-        { p: "¿Cortan a niños?", r: "Escríbenos por WhatsApp y te confirmamos el turno para el nene o la nena." },
-        { p: "¿Cómo pago?", r: "Escríbenos por WhatsApp y te confirmamos los métodos de pago." },
-        { p: "¿Dónde están ubicados?", r: "Escríbenos por WhatsApp y te enviamos la dirección." }
-      ],
-      ctaTitulo: "¿Te toca recorte?",
-      ctaSub: "Escríbenos por WhatsApp y reserva tu turno."
-    }
-  };
-
-  /* =========================================================
-     ÍCONOS (SVG inline)
-     ========================================================= */
-  const S = 'viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"';
-  const ICONOS = {
-    wa: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>',
-    tel: '<svg ' + S + '><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>',
-    pin: '<svg ' + S + '><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>',
-    reloj: '<svg ' + S + '><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
-    persona: '<svg ' + S + '><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>',
-    luna: '<svg ' + S + '><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>',
-    solmodo: '<svg ' + S + '><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
-    tijeras: '<svg ' + S + '><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg>',
-    navaja: '<svg ' + S + '><path d="M3 21l7-7"/><path d="M10 14l9.5-9.5a2.1 2.1 0 0 1 0 3L13 14z"/><path d="M8 16l2-2"/></svg>',
-    barba: '<svg ' + S + '><path d="M5 8c0 7 3 12 7 12s7-5 7-12"/><path d="M5 8h14"/><path d="M9 13c1 .7 2 1 3 1s2-.3 3-1"/></svg>',
-    nino: '<svg ' + S + '><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/><path d="M10 7h.01M14 7h.01"/></svg>',
-    casa: '<svg ' + S + '><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="M9 21v-6h6v6"/></svg>',
-    martillo: '<svg ' + S + '><path d="m15 12-8.5 8.5a2.1 2.1 0 0 1-3-3L12 9"/><path d="M17.6 15 22 10.6l-4.6-4.6-1.4-1.4a4 4 0 0 0-5.6 0L9 6l6 6"/></svg>',
-    techo: '<svg ' + S + '><path d="M2 12 12 4l10 8"/><path d="M5 10v10h14V10"/></svg>',
-    regla: '<svg ' + S + '><path d="M21.3 15.3 8.7 2.7a1 1 0 0 0-1.4 0L2.7 7.3a1 1 0 0 0 0 1.4l12.6 12.6a1 1 0 0 0 1.4 0l4.6-4.6a1 1 0 0 0 0-1.4z"/><path d="m7.5 10.5 2-2M10.5 13.5l2-2M13.5 16.5l2-2"/></svg>',
-    sol: '<svg ' + S + '><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>',
-    panel: '<svg ' + S + '><path d="M4 4h16l-2 10H6z"/><path d="M12 4v10M5 9h14M12 14v6M8 20h8"/></svg>',
-    bateria: '<svg ' + S + '><rect x="2" y="7" width="18" height="10" rx="2"/><path d="M22 11v2M11 9l-2 3h4l-2 3"/></svg>',
-    llave: '<svg ' + S + '><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.8-3.8a6 6 0 0 1-7.9 7.9l-6.9 6.9a2.1 2.1 0 0 1-3-3l6.9-6.9a6 6 0 0 1 7.9-7.9z"/></svg>',
-    diente: '<svg ' + S + '><path d="M12 5.5C10.5 4 8.5 3 6.5 3.5 4 4 3 6.5 3.5 9c.5 2.5 1.5 4 2 7 .4 2.5 1 5 2.5 5s1.5-3 2-5 1-3 2-3 1.5 1 2 3 .5 5 2 5 2.1-2.5 2.5-5c.5-3 1.5-4.5 2-7 .5-2.5-.5-5-3-5.5-2-.5-4 .5-5.5 2z"/></svg>',
-    sonrisa: '<svg ' + S + '><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>'
-  };
-
-  /* =========================================================
-     LÓGICA (no hace falta tocar de aquí para abajo)
-     ========================================================= */
-  const PENDIENTE = "Se confirma con el negocio";
-  const params = new URLSearchParams(location.search);
-  const val = (k, d) => { const v = params.get(k); return v !== null && v.trim() !== "" ? v.trim() : d; };
-
-  const D = {
-    nombre:    val("n",  DATOS.nombre) || "[NOMBRE DEL NEGOCIO]",
-    telefono:  (val("t", DATOS.telefono) || "").replace(/\D/g, "").slice(-10),
-    pueblo:    val("z",  DATOS.pueblo),
-    direccion: val("d",  DATOS.direccion),
-    horario:   val("h",  DATOS.horario),
-    dueno:     val("du", DATOS.dueno),
-    nicho:     val("nicho", DATOS.nicho),
-    subtitulo: DATOS.subtitulo,
-    cp:        DATOS.codigoPostal,
-    rating:    DATOS.rating,
-    resenas:   DATOS.resenas,
-    destacan:  DATOS.destacan || []
-  };
-  if (!PRESETS[D.nicho]) D.nicho = "construccion";
-  const P = PRESETS[D.nicho];
-  D.tema = val("tema", DATOS.tema) || P.tema;
-  if (!/^(negro|azul|verde|naranja)$/.test(D.tema)) D.tema = P.tema;
-
-  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
-  const telFmt = D.telefono.length === 10 ? D.telefono.replace(/(\d{3})(\d{3})(\d{4})/, "$1-$2-$3") : "";
-  const waBase = D.telefono.length === 10 ? "https://wa.me/1" + D.telefono : "";
-  const waLink = msg => waBase ? waBase + "?text=" + encodeURIComponent(msg) : "#contacto";
+  const WA = "https://wa.me/17874546041";
+  const waLink = msg => WA + "?text=" + encodeURIComponent(msg);
   const $ = id => document.getElementById(id);
 
-  document.documentElement.setAttribute("data-tema", D.tema);
-
-  // Textos simples
-  const etiqueta = D.pueblo ? P.etiqueta.replace("{pueblo}", D.pueblo) : P.etiquetaSinPueblo;
-  $("etiqueta").textContent = etiqueta;
-  $("heroTitulo").innerHTML = P.titulo; // texto fijo del preset (no viene de la URL)
-  $("heroSub").textContent = D.pueblo && P.subConPueblo ? P.subConPueblo.replace("{pueblo}", D.pueblo) : P.sub;
-  if (DATOS.muestra) $("muestra").hidden = false;
-  if (D.subtitulo) { $("marcaSub").textContent = D.subtitulo; $("marcaSub").hidden = false; }
-  $("ctaWa").textContent = P.ctaWa;
-  $("ctaTel").textContent = P.ctaTel;
-  $("servTitulo").textContent = P.servTitulo;
-  $("servNota").textContent = P.servNota;
-  $("selTitulo").textContent = P.selTitulo;
-  $("selSub").textContent = P.selSub;
-  $("selLabel").textContent = P.selLabel;
-  $("galTitulo").textContent = P.galTitulo;
-  $("baTitulo").textContent = P.baTitulo;
-  $("ctaTitulo").textContent = P.ctaTitulo;
-  $("ctaSub").textContent = P.ctaSub;
   $("anio").textContent = new Date().getFullYear();
-  $("footerTel").textContent = telFmt ? "Tel. / WhatsApp " + telFmt : "";
-  document.querySelectorAll('[data-k="nombre"]').forEach(el => el.textContent = D.nombre);
-  document.querySelectorAll('[data-k="ctaWa"]').forEach(el => el.textContent = P.ctaWa);
-  document.querySelectorAll('[data-k="ctaTel"]').forEach(el => el.textContent = P.ctaTel);
-  $("logo").textContent = D.nombre.replace(/[\[\]]/g, "").split(/\s+/).filter(Boolean).slice(0, 2).map(w => w[0]).join("").toUpperCase() || "•";
-  $("contactoSub").textContent = D.dueno ? "Pregunta por " + D.dueno + "." : "Escríbenos o llámanos.";
+  document.querySelectorAll("[data-wa]").forEach(a => a.href = waLink("Hola Manny, vi la página y quiero información."));
 
-  // Meta / título
-  document.title = D.nombre + " | " + (D.pueblo ? etiqueta : P.etiquetaSinPueblo);
-  const md = document.querySelector('meta[name="description"]');
-  if (md) md.setAttribute("content", D.nombre + ". " + P.sub);
-  const mt = document.querySelector('meta[name="theme-color"]');
-  if (mt) mt.setAttribute("content", getComputedStyle(document.documentElement).getPropertyValue("--hero-bg").trim());
-
-  // Íconos
-  document.querySelectorAll("[data-icon]").forEach(el => el.outerHTML = ICONOS[el.dataset.icon] || "");
-
-  // Enlaces WhatsApp / teléfono
-  const msgGeneral = "Hola, vi su página y quiero información.";
-  document.querySelectorAll("[data-wa]").forEach(a => a.href = waLink(msgGeneral));
-  document.querySelectorAll("[data-tel]").forEach(a => a.href = D.telefono ? "tel:" + D.telefono : "#contacto");
-
-  // Hero visual
-  $("heroVisual").innerHTML = IMAGES.hero
-    ? '<img src="' + esc(IMAGES.hero) + '" alt="' + esc(D.nombre) + '" />'
-    : '<div class="ph">' + (ICONOS[P.icono] || "") + '<div>' + esc(P.galEtiqueta) + '</div></div>';
-
-  // Servicios
-  $("servicios-lista").innerHTML = P.servicios.map(s =>
-    '<article class="card reveal"><div class="ico">' + (ICONOS[s.icono] || "") + '</div><h3>' + esc(s.titulo) + '</h3><p>' + esc(s.texto) + '</p></article>'
-  ).join("");
-
-  // Selector WhatsApp
-  let elegido = 0;
-  const pintarSel = () => {
-    let msg = P.selMensaje.replace("{valor}", P.selOpciones[elegido].valor);
-    if (D.dueno) msg = msg.replace(/^Hola,/, "Hola " + D.dueno + ",");
+  // Selector de servicio
+  const pintarSel = valor => {
+    const msg = "Hola Manny, quiero reservar un " + valor + ". ¿Qué turno tienen disponible?";
     $("preview").textContent = "“" + msg + "”";
     $("selBtn").href = waLink(msg);
-    document.querySelectorAll("#chips .chip").forEach((c, i) => c.setAttribute("aria-pressed", i === elegido));
   };
-  $("chips").innerHTML = P.selOpciones.map((o, i) => '<button type="button" class="chip" data-i="' + i + '">' + esc(o.label) + '</button>').join("");
-  $("chips").addEventListener("click", e => { const b = e.target.closest(".chip"); if (b) { elegido = +b.dataset.i; pintarSel(); } });
-  pintarSel();
+  $("chips").addEventListener("click", e => {
+    const b = e.target.closest(".chip");
+    if (!b) return;
+    document.querySelectorAll("#chips .chip").forEach(c => c.setAttribute("aria-pressed", c === b));
+    pintarSel(b.dataset.v);
+  });
+  pintarSel("corte clásico");
 
-  // Galería
-  $("galeria-lista").innerHTML = IMAGES.galeria.slice(0, 6).concat(Array(6).fill("")).slice(0, 6).map((src, i) =>
-    '<div class="foto reveal">' + (src
-      ? '<img loading="lazy" src="' + esc(src) + '" alt="' + esc(P.galEtiqueta + " " + (i + 1)) + '" />'
-      : '<span>' + esc(P.galEtiqueta) + '</span>') + '</div>'
-  ).join("");
+  // Fotos reales
+  if (IMAGES.hero) document.querySelector(".hero").style.backgroundImage = 'linear-gradient(rgba(12,11,10,.72), rgba(12,11,10,.72)), url("' + IMAGES.hero + '")';
+  document.querySelectorAll("#galeriaLista .foto").forEach((f, i) => {
+    if (!IMAGES.galeria[i]) return;
+    const img = new Image();
+    img.src = IMAGES.galeria[i]; img.alt = "Foto de corte " + (i + 1); img.loading = "lazy";
+    f.replaceChildren(img);
+  });
+  const ponerFoto = (el, src, alt) => {
+    if (!src) return;
+    const img = new Image();
+    img.src = src; img.alt = alt;
+    el.replaceChildren(img);
+  };
+  ponerFoto($("baAntes"), IMAGES.antes, "Antes");
+  ponerFoto($("baDespues"), IMAGES.despues, "Después");
 
   // Antes / después
-  $("baAntes").innerHTML = IMAGES.antes ? '<img src="' + esc(IMAGES.antes) + '" alt="Antes" />' : '<span class="ba-ph">Foto de antes</span>';
-  $("baDespues").innerHTML = IMAGES.despues ? '<img src="' + esc(IMAGES.despues) + '" alt="Después" />' : '<span class="ba-ph">Foto de después</span>';
   const baMover = v => { $("baDespues").style.clipPath = "inset(0 0 0 " + v + "%)"; $("baLine").style.left = v + "%"; };
-  $("baRange").addEventListener("input", e => baMover(e.target.value));
-
-  // Pasos
-  $("pasos-lista").innerHTML = P.pasos.map(p => '<div class="paso reveal"><h3>' + esc(p.titulo) + '</h3><p>' + esc(p.texto) + '</p></div>').join("");
-
-  // Calificación real + etiquetas "Los clientes destacan" (solo si hay datos)
-  const estrellas = r => { const n = Math.round(parseFloat(r)); return "★★★★★".slice(0, n) + "☆☆☆☆☆".slice(0, 5 - n); };
-  let rHtml = "";
-  if (D.rating) {
-    rHtml += '<div class="rating reveal"><span class="num">' + esc(D.rating) + '</span><div><span class="stars" aria-hidden="true">' +
-      estrellas(D.rating) + '</span><small>Calificación en Google' + (D.resenas ? " · " + esc(D.resenas) + " reseñas" : "") + '</small></div></div>';
-  }
-  if (D.destacan.length) {
-    rHtml += '<p class="tags-title reveal">Los clientes destacan</p><div class="tags reveal">' +
-      D.destacan.map(t => '<span class="tag">' + esc(t) + '</span>').join("") + '</div>';
-  }
-  $("rating-box").innerHTML = rHtml;
-
-  // Reseñas: solo espacios de relleno (poner reseñas reales con permiso del cliente)
-  $("resenas-lista").innerHTML = rHtml ? "" : [1, 2, 3].map(() =>
-    '<div class="res reveal">Aquí va una reseña real de un cliente, con su permiso.<b>Nombre del cliente</b></div>'
-  ).join("");
-
-  // FAQ
-  $("faq-lista").innerHTML = P.faq.map(f => '<details class="reveal"><summary>' + esc(f.p) + '</summary><p>' + esc(f.r) + '</p></details>').join("");
-
-  // Contacto
-  const dato = (ico, label, valor, href) => {
-    const cuerpo = '<div class="ico">' + ICONOS[ico] + '</div><div style="min-width:0"><small>' + label + '</small>' +
-      (valor ? '<strong>' + esc(valor) + '</strong>' : '<strong class="pend">' + PENDIENTE + '</strong>') + '</div>';
-    return href && valor
-      ? '<a class="dato reveal" href="' + href + '"' + (href.startsWith("http") ? ' target="_blank" rel="noopener"' : "") + '>' + cuerpo + '</a>'
-      : '<div class="dato reveal">' + cuerpo + '</div>';
-  };
-  $("contacto-lista").innerHTML = [
-    dato("tel", "Teléfono", telFmt, D.telefono ? "tel:" + D.telefono : ""),
-    dato("wa", "WhatsApp", telFmt, waBase ? waLink(msgGeneral) : ""),
-    dato("pin", "Ubicación", [D.direccion, D.pueblo, D.cp ? "PR " + D.cp : ""].filter(Boolean).join(", "), ""),
-    dato("reloj", "Horario", D.horario, "")
-  ].join("") + (D.rating
-    ? '<div class="dato reveal"><div class="ico">' + ICONOS.sonrisa + '</div><div style="min-width:0"><small>Google</small><strong>' +
-      esc(D.rating) + ' ★' + (D.resenas ? " · " + esc(D.resenas) + " reseñas" : "") + '</strong></div></div>'
-    : "");
-
-  // Botón "Cómo llegar" (solo si hay dirección)
-  if (D.direccion) {
-    const q = [D.nombre, D.direccion, D.pueblo, "PR", D.cp].filter(Boolean).join(", ");
-    $("mapa-box").innerHTML = '<a class="btn btn-accent mapa-btn reveal" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=' +
-      encodeURIComponent(q) + '">' + ICONOS.pin + 'Cómo llegar</a>';
-  }
-
-  // JSON-LD (solo datos reales; sin calificaciones)
-  const schema = { "@context": "https://schema.org", "@type": P.tipoSchema, "name": D.nombre };
-  if (telFmt) schema.telephone = "+1-" + telFmt;
-  if (D.pueblo || D.direccion) {
-    schema.address = { "@type": "PostalAddress", "addressRegion": "PR", "addressCountry": "US" };
-    if (D.direccion) schema.address.streetAddress = D.direccion;
-    if (D.pueblo) schema.address.addressLocality = D.pueblo;
-    if (D.cp) schema.address.postalCode = D.cp;
-  }
-  if (DATOS.horarioSchema && DATOS.horarioSchema.length) {
-    schema.openingHoursSpecification = DATOS.horarioSchema.map(h => ({
-      "@type": "OpeningHoursSpecification", "dayOfWeek": h.dias, "opens": h.abre, "closes": h.cierra
-    }));
-  }
-  if (D.rating && D.resenas) {
-    schema.aggregateRating = { "@type": "AggregateRating", "ratingValue": D.rating, "reviewCount": D.resenas, "bestRating": "5" };
-  }
-  $("schema-negocio").textContent = JSON.stringify(schema);
+  let baIntro = null;
+  $("baRange").addEventListener("input", e => { if (baIntro) baIntro.kill(); baMover(e.target.value); });
 
   // Modo claro / oscuro
   const root = document.documentElement;
@@ -995,29 +595,153 @@
   try { modo = localStorage.getItem("modo"); } catch (e) {}
   if (modo === "claro" || modo === "oscuro") root.setAttribute("data-modo", modo);
   const esOscuro = () => root.getAttribute("data-modo") ? root.getAttribute("data-modo") === "oscuro" : mq.matches;
-  const pintarModo = () => { $("modoBtn").innerHTML = esOscuro() ? ICONOS.solmodo : ICONOS.luna; };
+  const pintarModo = () => { $("modoBtn").innerHTML = '<svg class="ic"><use href="#i-' + (esOscuro() ? "sol" : "luna") + '"/></svg>'; };
   $("modoBtn").addEventListener("click", () => {
     const nuevo = esOscuro() ? "claro" : "oscuro";
     root.setAttribute("data-modo", nuevo);
     try { localStorage.setItem("modo", nuevo); } catch (e) {}
     pintarModo();
   });
-  mq.addEventListener && mq.addEventListener("change", pintarModo);
+  mq.addEventListener("change", pintarModo);
   pintarModo();
 
-  // Animación al hacer scroll
-  const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(en => {
-    if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
-  }), { threshold: .12, rootMargin: "0px 0px -40px 0px" }) : null;
-  document.querySelectorAll(".reveal").forEach((el, i) => {
-    if (io) { el.style.transitionDelay = (i % 4) * 70 + "ms"; io.observe(el); } else el.classList.add("in");
-  });
-
-  // Barra móvil: aparece al pasar el hero
+  // Barra móvil
   const barra = $("barra");
   const onScroll = () => barra.classList.toggle("on", scrollY > 420);
   addEventListener("scroll", onScroll, { passive: true });
   onScroll();
+
+  // Enlaces internos (scroll suave por JS: ScrollTrigger no convive con scroll-behavior:smooth)
+  document.addEventListener("click", e => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const el = document.querySelector(a.getAttribute("href"));
+    if (!el) return;
+    e.preventDefault();
+    const quieto = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    scrollTo({ top: el.getBoundingClientRect().top + scrollY - 68, behavior: quieto ? "auto" : "smooth" });
+  });
+
+  /* =========================================================
+     ANIMACIONES — si GSAP no carga o el visitante pide menos
+     movimiento, la página queda completa y estática.
+     ========================================================= */
+  if (window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.config({ ignoreMobileResize: true });
+    const mm = gsap.matchMedia();
+
+    mm.add({ movimiento: "(prefers-reduced-motion: no-preference)", escritorio: "(min-width:900px)" }, ctx => {
+      if (!ctx.conditions.movimiento) return;
+      const esc = ctx.conditions.escritorio;
+      const track = $("servTrack");
+      const serv = $("servicios");
+      root.classList.add("anim");
+
+      // Progreso de lectura
+      gsap.to(".progreso", { scaleX: 1, ease: "none", scrollTrigger: { start: 0, end: "max", scrub: .3 } });
+
+      // Hero: entrada
+      gsap.timeline({ defaults: { ease: "power4.out" } })
+        .from(".ln > span", { yPercent: 110, duration: 1.1, stagger: .12 })
+        .from(".etiqueta, .hero-sub, .hero .ctas", { autoAlpha: 0, y: 18, duration: .7, stagger: .1 }, "-=.6");
+
+      // Hero: fijado, el poste gira y el contenido sale
+      gsap.timeline({
+        scrollTrigger: { trigger: ".hero", start: "top " + 68, end: "+=75%", pin: true, scrub: .6 }
+      })
+        .to(".pole i", { yPercent: 33, ease: "none", duration: 1 }, 0)
+        .to(".hero-inner", { yPercent: -14, autoAlpha: 0, ease: "power1.in", duration: .7 }, .3);
+
+      // Cinta de servicios
+      gsap.fromTo("#cinta1", { xPercent: 0 }, {
+        xPercent: -33, ease: "none",
+        scrollTrigger: { trigger: ".cinta", start: "top bottom", end: "bottom top", scrub: .5 }
+      });
+
+      // Servicios
+      if (esc) {
+        serv.classList.add("is-h");
+        track.classList.add("is-h");
+        track.classList.remove("wrap");
+        const dist = () => Math.max(0, track.scrollWidth - innerWidth);
+        gsap.to(track, {
+          x: () => -dist(), ease: "none",
+          scrollTrigger: {
+            trigger: serv, start: "top top", end: () => "+=" + dist(),
+            pin: ".serv-pin", scrub: .6, invalidateOnRefresh: true
+          }
+        });
+      } else {
+        const cards = gsap.utils.toArray(".card");
+        cards.slice(0, -1).forEach((c, i) => gsap.to(c, {
+          scale: .94, ease: "none",
+          scrollTrigger: { trigger: cards[i + 1], start: "top 75%", end: "top 25%", scrub: true }
+        }));
+      }
+
+      // Pasos: riel de progreso
+      gsap.fromTo("#railFill", { scaleY: 0 }, {
+        scaleY: 1, ease: "none",
+        scrollTrigger: { trigger: "#pasos", start: "top 68%", end: "bottom 62%", scrub: .4 }
+      });
+      gsap.utils.toArray(".paso").forEach(p => ScrollTrigger.create({ trigger: p, start: "top 68%", toggleClass: "on", end: "max" }));
+
+      // Galería: paralaje por columna en escritorio
+      if (esc) {
+        const desfase = [-30, 40, -60];
+        gsap.utils.toArray(".foto-w").forEach((f, i) => gsap.fromTo(f, { y: 30 }, {
+          y: desfase[i % 3], ease: "none",
+          scrollTrigger: { trigger: "#galeriaLista", start: "top bottom", end: "bottom top", scrub: .6 }
+        }));
+      }
+
+      // Antes / después: barrido inicial; el visitante lo controla después
+      ScrollTrigger.create({
+        trigger: "#ba", start: "top 72%", once: true,
+        onEnter: () => {
+          const s = { v: 50 };
+          const pintar = () => { baMover(s.v); $("baRange").value = s.v; };
+          baIntro = gsap.timeline({ onUpdate: pintar })
+            .to(s, { v: 16, duration: .7, ease: "power2.inOut" })
+            .to(s, { v: 84, duration: 1, ease: "power2.inOut" })
+            .to(s, { v: 50, duration: .7, ease: "power2.inOut" });
+        }
+      });
+
+      // Calificación: el conteo termina en los datos reales
+      const n = { nota: 0, res: 0 };
+      gsap.fromTo(n, { nota: 0, res: 0 }, {
+        nota: 4.8, res: 120, duration: 1.5, ease: "power2.out",
+        scrollTrigger: { trigger: "#rBox", start: "top 85%", once: true },
+        onUpdate: () => { $("rNum").textContent = n.nota.toFixed(1); $("rCount").textContent = Math.round(n.res); }
+      });
+      gsap.from("#rStars", { width: 0, duration: 1.5, ease: "power2.out", scrollTrigger: { trigger: "#rBox", start: "top 85%", once: true } });
+
+      // CTA final
+      gsap.fromTo("#ctaTitulo", { scale: .72, autoAlpha: .25 }, {
+        scale: 1, autoAlpha: 1, ease: "none",
+        scrollTrigger: { trigger: ".cta-final", start: "top 90%", end: "top 35%", scrub: .5 }
+      });
+
+      // Entrada del resto de los bloques
+      const items = gsap.utils.toArray("[data-r]");
+      gsap.set(items, { autoAlpha: 0, y: 30 });
+      ScrollTrigger.batch(items, {
+        start: "top 94%", once: true,
+        onEnter: lote => gsap.to(lote, { autoAlpha: 1, y: 0, duration: .7, stagger: .07, ease: "power3.out", overwrite: true })
+      });
+
+      return () => {
+        root.classList.remove("anim");
+        serv.classList.remove("is-h");
+        track.classList.remove("is-h");
+        track.classList.add("wrap");
+      };
+    });
+
+    document.fonts.ready.then(() => ScrollTrigger.refresh());
+  }
   </script>
 </body>
 </html>
