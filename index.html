@@ -74,7 +74,6 @@
     .eyebrow{ display:block; font-size:.78rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; color:var(--accent-text); margin-bottom:12px; }
     .sec-title{ font-size:clamp(2.6rem, 9vw, 5rem); margin-bottom:.35em; }
     .sec-sub{ color:var(--muted); max-width:600px; }
-    .nota{ font-size:.88rem; color:var(--muted); font-style:italic; margin:0; }
     @media (min-width:768px){ .wrap{ padding:0 32px; } section{ padding:120px 0; } }
 
     .btn{
@@ -216,53 +215,21 @@
     .sel-box .btn{ width:100%; }
 
     /* =========================================================
-       8. GALERÍA
-       ========================================================= */
-    #galeria{ padding-top:0; }
-    .galeria{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:28px; }
-    @media (min-width:900px){ .galeria{ grid-template-columns:repeat(3,1fr); gap:20px; padding-bottom:60px; } }
-    .foto{
-      position:relative; aspect-ratio:4/5; overflow:hidden; border-radius:4px; display:grid; place-items:center;
-      background:repeating-linear-gradient(-45deg, var(--surface-2) 0 14px, var(--surface) 14px 28px);
-      border:1px solid var(--line);
-    }
-    .foto img{ width:100%; height:100%; object-fit:cover; }
-    .foto span{ font-size:.85rem; font-weight:700; color:var(--muted); background:var(--surface); padding:4px 10px; border-radius:3px; }
-
-    /* =========================================================
-       9. ANTES Y DESPUÉS
-       ========================================================= */
-    #antes-despues{ padding-top:0; }
-    .ba{ position:relative; max-width:860px; margin:30px auto 0; aspect-ratio:4/3; border-radius:6px; overflow:hidden; user-select:none; touch-action:pan-y; }
-    .ba-layer{ position:absolute; inset:0; display:grid; place-items:center; }
-    .ba-layer img{ width:100%; height:100%; object-fit:cover; }
-    .ba-antes{ background:#55524C; }
-    .ba-despues{ background:var(--ink-2); clip-path:inset(0 0 0 50%); }
-    .ba-ph{ color:rgba(255,255,255,.72); font-weight:700; font-size:.9rem; }
-    .ba-tag{ position:absolute; top:14px; z-index:2; padding:6px 12px; font-size:.78rem; font-weight:700; border-radius:3px; background:rgba(0,0,0,.6); color:#fff; }
-    .ba-tag.l{ left:14px; }
-    .ba-tag.r{ right:14px; background:var(--gold); color:var(--ink); }
-    .ba-line{ position:absolute; top:0; bottom:0; left:50%; width:3px; background:var(--cream); transform:translateX(-50%); z-index:3; pointer-events:none; }
-    .ba-line::after{ content:"⟷"; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:46px; height:46px; border-radius:50%; background:var(--cream); color:var(--ink); display:grid; place-items:center; font-weight:700; }
-    .ba input{ position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:ew-resize; z-index:4; margin:0; }
-
-    /* =========================================================
-       10. RESEÑAS
+       8. RESEÑAS
        ========================================================= */
     .resenas{ background:var(--ink); color:var(--cream); }
     .resenas .eyebrow{ color:var(--gold); }
     .res-grid{ display:grid; gap:36px; align-items:center; margin-top:18px; }
     @media (min-width:900px){ .res-grid{ grid-template-columns:auto 1fr; gap:90px; } }
     .r-num{ font:400 clamp(7rem, 30vw, 12rem)/1 Anton, sans-serif; color:var(--gold); }
-    .stars{ position:relative; display:inline-block; font-size:1.5rem; letter-spacing:3px; color:rgba(243,237,224,.25); line-height:1.2; }
-    .stars i{ position:absolute; left:0; top:0; width:96%; overflow:hidden; white-space:nowrap; font-style:normal; color:var(--gold); }
+    .stars{ display:inline-block; font-size:1.5rem; letter-spacing:3px; color:var(--gold); line-height:1.2; }
     .r-txt{ opacity:.8; font-size:.95rem; margin:6px 0 0; }
     .tags-title{ font-weight:700; margin-bottom:14px; }
     .tags{ display:flex; flex-wrap:wrap; gap:10px; }
     .tag{ padding:11px 16px; border-radius:4px; background:rgba(243,237,224,.09); font-weight:500; }
 
     /* =========================================================
-       11. FAQ + CONTACTO
+       9. FAQ + CONTACTO
        ========================================================= */
     .faq{ max-width:820px; margin-top:28px; }
     details{ border-bottom:1px solid var(--line); }
@@ -330,7 +297,6 @@
       <nav class="nav-links" aria-label="Secciones">
         <a href="#servicios">Servicios</a>
         <a href="#como">Cómo funciona</a>
-        <a href="#galeria">Galería</a>
         <a href="#faq">Preguntas</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -372,7 +338,6 @@
           <div class="serv-head">
             <span class="eyebrow">Servicios</span>
             <h2 class="disp sec-title">Lo que hacemos</h2>
-            <p class="nota">Ejemplo de servicios: se ajustan a los que realmente ofrece la barbería.</p>
           </div>
           <article class="card" style="--i:0"><span class="num">01</span><div class="ico"><svg class="ic"><use href="#i-tijeras"/></svg></div><h3 class="disp">Corte clásico</h3><p>El corte de siempre, bien hecho.</p></article>
           <article class="card" style="--i:1"><span class="num">02</span><div class="ico"><svg class="ic"><use href="#i-navaja"/></svg></div><h3 class="disp">Fade y degradados</h3><p>Degradados a tu gusto.</p></article>
@@ -418,39 +383,6 @@
       </div>
     </section>
 
-    <!-- GALERÍA -->
-    <section id="galeria">
-      <div class="wrap">
-        <span class="eyebrow" data-r>Galería</span>
-        <h2 class="disp sec-title" data-r>Nuestros cortes</h2>
-        <div class="galeria" id="galeriaLista">
-          <div class="foto-w"><div class="foto" data-r><span>Foto de corte</span></div></div>
-          <div class="foto-w"><div class="foto" data-r><span>Foto de corte</span></div></div>
-          <div class="foto-w"><div class="foto" data-r><span>Foto de corte</span></div></div>
-          <div class="foto-w"><div class="foto" data-r><span>Foto de corte</span></div></div>
-          <div class="foto-w"><div class="foto" data-r><span>Foto de corte</span></div></div>
-          <div class="foto-w"><div class="foto" data-r><span>Foto de corte</span></div></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ANTES Y DESPUÉS -->
-    <section id="antes-despues">
-      <div class="wrap">
-        <span class="eyebrow" data-r>Resultado</span>
-        <h2 class="disp sec-title" data-r>Antes y después de tu corte</h2>
-        <p class="sec-sub" data-r>Desliza para comparar.</p>
-        <div class="ba" id="ba">
-          <div class="ba-layer ba-antes" id="baAntes"><span class="ba-ph">Foto de antes</span></div>
-          <div class="ba-layer ba-despues" id="baDespues"><span class="ba-ph">Foto de después</span></div>
-          <span class="ba-tag l">Antes</span>
-          <span class="ba-tag r">Después</span>
-          <div class="ba-line" id="baLine"></div>
-          <input type="range" min="0" max="100" value="50" id="baRange" aria-label="Comparar antes y después" />
-        </div>
-      </div>
-    </section>
-
     <!-- RESEÑAS -->
     <section class="resenas" id="resenas">
       <div class="wrap">
@@ -459,7 +391,7 @@
         <div class="res-grid">
           <div id="rBox">
             <div class="r-num" id="rNum">4.8</div>
-            <span class="stars" role="img" aria-label="4.8 de 5 estrellas">★★★★★<i id="rStars">★★★★★</i></span>
+            <span class="stars" role="img" aria-label="4.8 de 5 estrellas">★★★★★</span>
             <p class="r-txt">Calificación en Google · <span id="rCount">120</span> reseñas</p>
           </div>
           <div>
@@ -481,10 +413,9 @@
         <span class="eyebrow" data-r>Preguntas frecuentes</span>
         <h2 class="disp sec-title" data-r>¿Tienes dudas?</h2>
         <div class="faq">
-          <details data-r><summary>¿Hay que reservar o se puede llegar sin cita?</summary><p>Escríbenos por WhatsApp y te confirmamos cómo está el turno ese día.</p></details>
-          <details data-r><summary>¿Cortan a niños?</summary><p>Escríbenos por WhatsApp y te confirmamos el turno para el nene o la nena.</p></details>
-          <details data-r><summary>¿Cómo pago?</summary><p>Escríbenos por WhatsApp y te confirmamos los métodos de pago.</p></details>
-          <details data-r><summary>¿Dónde están ubicados?</summary><p>Estamos en 1110 Av. Américo Miranda, San Juan, PR 00921.</p></details>
+          <details data-r><summary>¿Cómo pido cita?</summary><p>Escribe por WhatsApp al 787-454-6041.</p></details>
+          <details data-r><summary>¿Cuál es el horario?</summary><p>Lunes a sábado de 9:00 AM a 7:00 PM. Domingo cerrado.</p></details>
+          <details data-r><summary>¿Dónde están ubicados?</summary><p>1110 Av. Américo Miranda, San Juan, PR 00921.</p></details>
         </div>
       </div>
     </section>
@@ -539,10 +470,7 @@
      Vacío = se muestra el espacio de relleno.
      ========================================================= */
   const IMAGES = {
-    hero: "",
-    galeria: ["", "", "", "", "", ""],
-    antes: "",
-    despues: ""
+    hero: ""
   };
 
   const WA = "https://wa.me/17874546041";
@@ -568,26 +496,6 @@
 
   // Fotos reales
   if (IMAGES.hero) document.querySelector(".hero").style.backgroundImage = 'linear-gradient(rgba(12,11,10,.72), rgba(12,11,10,.72)), url("' + IMAGES.hero + '")';
-  document.querySelectorAll("#galeriaLista .foto").forEach((f, i) => {
-    if (!IMAGES.galeria[i]) return;
-    const img = new Image();
-    img.src = IMAGES.galeria[i]; img.alt = "Foto de corte " + (i + 1); img.loading = "lazy";
-    f.replaceChildren(img);
-  });
-  const ponerFoto = (el, src, alt) => {
-    if (!src) return;
-    const img = new Image();
-    img.src = src; img.alt = alt;
-    el.replaceChildren(img);
-  };
-  ponerFoto($("baAntes"), IMAGES.antes, "Antes");
-  ponerFoto($("baDespues"), IMAGES.despues, "Después");
-
-  // Antes / después
-  const baMover = v => { $("baDespues").style.clipPath = "inset(0 0 0 " + v + "%)"; $("baLine").style.left = v + "%"; };
-  let baIntro = null;
-  $("baRange").addEventListener("input", e => { if (baIntro) baIntro.kill(); baMover(e.target.value); });
-
   // Modo claro / oscuro
   const root = document.documentElement;
   const mq = matchMedia("(prefers-color-scheme: dark)");
@@ -687,28 +595,6 @@
       });
       gsap.utils.toArray(".paso").forEach(p => ScrollTrigger.create({ trigger: p, start: "top 68%", toggleClass: "on", end: "max" }));
 
-      // Galería: paralaje por columna en escritorio
-      if (esc) {
-        const desfase = [-30, 40, -60];
-        gsap.utils.toArray(".foto-w").forEach((f, i) => gsap.fromTo(f, { y: 30 }, {
-          y: desfase[i % 3], ease: "none",
-          scrollTrigger: { trigger: "#galeriaLista", start: "top bottom", end: "bottom top", scrub: .6 }
-        }));
-      }
-
-      // Antes / después: barrido inicial; el visitante lo controla después
-      ScrollTrigger.create({
-        trigger: "#ba", start: "top 72%", once: true,
-        onEnter: () => {
-          const s = { v: 50 };
-          const pintar = () => { baMover(s.v); $("baRange").value = s.v; };
-          baIntro = gsap.timeline({ onUpdate: pintar })
-            .to(s, { v: 16, duration: .7, ease: "power2.inOut" })
-            .to(s, { v: 84, duration: 1, ease: "power2.inOut" })
-            .to(s, { v: 50, duration: .7, ease: "power2.inOut" });
-        }
-      });
-
       // Calificación: el conteo termina en los datos reales
       const n = { nota: 0, res: 0 };
       gsap.fromTo(n, { nota: 0, res: 0 }, {
@@ -716,7 +602,6 @@
         scrollTrigger: { trigger: "#rBox", start: "top 85%", once: true },
         onUpdate: () => { $("rNum").textContent = n.nota.toFixed(1); $("rCount").textContent = Math.round(n.res); }
       });
-      gsap.from("#rStars", { width: 0, duration: 1.5, ease: "power2.out", scrollTrigger: { trigger: "#rBox", start: "top 85%", once: true } });
 
       // CTA final
       gsap.fromTo("#ctaTitulo", { scale: .72, autoAlpha: .25 }, {
